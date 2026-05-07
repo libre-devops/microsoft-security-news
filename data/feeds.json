@@ -1,15 +1,159 @@
 {
-  "lastUpdated": "2026-05-06T14:08:48.729432+00:00",
-  "totalArticles": 272,
+  "lastUpdated": "2026-05-07T14:12:04.066881+00:00",
+  "totalArticles": 274,
   "articles": [
+    {
+      "title": "Bringing all your Integration workloads to Logic Apps Standard",
+      "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/bringing-all-your-integration-workloads-to-logic-apps-standard/ba-p/4517262",
+      "published": "2026-05-07T11:30:00+00:00",
+      "summary": "We recently announced the end of life of BizTalk Server and provided a path forward for our customers. As part of that commitment, we’re investing in tooling and guidance that reduces migration complexity and helps teams modernize confidently to Azure Logic Apps Standard. Because enterprise...",
+      "blog": "Integrations on Azure",
+      "blogId": "integrationsonazureblog",
+      "author": "hcamposu"
+    },
+    {
+      "title": "Building a Scalable Contract Data Extraction Pipeline with Microsoft Foundry and Python",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-scalable-contract-data-extraction-pipeline-with/ba-p/4513681",
+      "published": "2026-05-07T07:00:00+00:00",
+      "summary": "Architecture Overview Alt text: Architecture diagram showing Blob Storage triggering Azure Function, calling Document Intelligence, transforming data, and storing in Cosmos DB Flow: Upload contract files (PDF or ZIP) to Azure Blob Storage Azure Function triggers automatically on file upload Azure...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "tanyabaranwal"
+    },
+    {
+      "title": "SQL query generation from natural language",
+      "link": "https://devblogs.microsoft.com/ise/llm-sql-query-generation/",
+      "published": "2026-05-07T07:00:00+00:00",
+      "summary": "Evaluating AI agents for NL-to-SQL generation across Azure Databricks AI/BI Genie, GitHub Copilot CLI, and Microsoft Agent Framework. We achieved ~75% accuracy with schema documentation and runtime validation, while discovering that business logic errors represent a fundamental limitation requiring...",
+      "blog": "ISE Developer Blog",
+      "blogId": "iseblog",
+      "author": "Ashley Costigane"
+    },
+    {
+      "title": "Governing Agent Sprawl: A Multi‑Region AI Agent Landing Zone on Azure (Reference Architecture)",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/governing-agent-sprawl-a-multi-region-ai-agent-landing-zone-on/ba-p/4516036",
+      "published": "2026-05-07T05:19:02+00:00",
+      "summary": "It doesn’t take long for AI agents to get out of hand. In most enterprises, the first few agents are celebrated. A chatbot here. A document summarizer there. Then another team ships an agent that calls APIs. Someone else connects one to internal data. Within months, IT is staring at dozens—or...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "KimVaddi"
+    },
+    {
+      "title": "How Validation‑Driven Terraform Made Our Azure Function Deployments Predictable",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-validation-driven-terraform-made-our-azure-function/ba-p/4517375",
+      "published": "2026-05-07T05:12:06+00:00",
+      "summary": "When Terraform deploys Azure Functions, the most expensive failures are rarely “syntax” problems. They’re environmental mismatches discovered too late—during terraform apply, after approvals, after a change window starts, and often after multiple teams are already watching the pipeline. After a few...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "AkshitaBajpai"
+    },
+    {
+      "title": "Cutover Strategy for Azure PaaS Services: A Step-by-Step Guide to Near Zero-Downtime Migrations",
+      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/cutover-strategy-for-azure-paas-services-a-step-by-step-guide-to/ba-p/4517261",
+      "published": "2026-05-07T05:07:35+00:00",
+      "summary": "\"In most Azure migrations, infrastructure is the easy part. The real risk — and the real engineering challenge — lies in the cutover.\" Why Cutover Strategy Matters Migrating mission-critical applications to Microsoft Azure — especially PaaS-based systems — requires more than provisioning resources....",
+      "blog": "Azure Migration",
+      "blogId": "azuremigrationblog",
+      "author": "lapadman"
+    },
+    {
+      "title": "Azure Reserved VM Instances for select VM series will no longer be available starting July 1, 2026",
+      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-reserved-vm-instances-for-select-vm-series-will-no-longer/ba-p/4516505",
+      "published": "2026-05-06T20:11:47+00:00",
+      "summary": "Summary Starting July 1, 2026, Azure will no longer offer new purchases or renewals of certain Azure Reserved Virtual Machine Instances (RIs) for select VM series. This change affects only the ability to buy or renew RIs for the VM series listed below—your existing reservations will continue to...",
+      "blog": "Azure Compute",
+      "blogId": "azurecompute",
+      "author": "kyleikeda"
+    },
+    {
+      "title": "Prefix-scoped access for User Delegation SAS is now generally available for Azure Blob Storage",
+      "link": "https://techcommunity.microsoft.com/t5/azure-storage-blog/prefix-scoped-access-for-user-delegation-sas-is-now-generally/ba-p/4516010",
+      "published": "2026-05-06T20:01:06+00:00",
+      "summary": "We would like to share that prefix-scoped access for User Delegation SAS for Azure Blob Storage is generally available in all Azure regions. SAS tokens for Blob Storage have historically supported two levels of scope: container and individual blob. With this release, you can now scope access to a...",
+      "blog": "Azure Storage",
+      "blogId": "azurestorageblog",
+      "author": "despindola"
+    },
+    {
+      "title": "Multitude builds resilient banking platform with PostgreSQL and MySQL on Azure",
+      "link": "https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/multitude-builds-resilient-banking-platform-with-postgresql-and/ba-p/4512470",
+      "published": "2026-05-06T18:53:20+00:00",
+      "summary": "Expanding into new markets is usually a sign that things are going well. For digital banking platforms, however, growth brings a different kind of challenge - more customers, more data, and stricter expectations around availability, security, and regulatory compliance. At Multitude, we operate...",
+      "blog": "Customer Innovation",
+      "blogId": "azure-customer-innovation-blog",
+      "author": "Pooja_Y"
+    },
+    {
+      "title": "Distributing model weights to your AI cluster: a faster pre-flight on AKS and Slurm",
+      "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/distributing-model-weights-to-your-ai-cluster-a-faster-pre/ba-p/4517294",
+      "published": "2026-05-06T18:30:00+00:00",
+      "summary": "Why this exists You've provisioned a multi-node GPU cluster on Azure. NDR InfiniBand. The training script is ready. Before any GPU does any useful work, every node needs the same 400 GB model checkpoint on its local NVMe. The naive approach — azcopy (or our Rust equivalent, azcp) on every node, in...",
+      "blog": "High Performance Computing",
+      "blogId": "azurehighperformancecomputingblog",
+      "author": "pauledwards"
+    },
+    {
+      "title": "Better together with Azure WAF + Microsoft Defender for Storage + Defender for Azure SQL Databases",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/better-together-with-azure-waf-microsoft-defender-for-storage/ba-p/4517101",
+      "published": "2026-05-06T17:22:23+00:00",
+      "summary": "Authored by: Fernanda_Vela​ , saikishor​, Yura_Lee​ Reviewed by: YuriDiogenes​, Mohit_Kumar​, Amir_Dahan​, eitanbremler​ , Kitt_Weatherman​ Introduction Often, customers ask why additional workload protection is needed when a web application firewall is already in place. Azure Web Application...",
+      "blog": "Microsoft Defender for Cloud",
+      "blogId": "microsoftdefendercloudblog",
+      "author": "Yura_Lee"
+    },
+    {
+      "title": "Now in Foundry: IBM Granite 4.1, NVIDIA Nemotron Nano Omni, and Qwen3.6-35B-A3B",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/now-in-foundry-ibm-granite-4-1-nvidia-nemotron-nano-omni-and/ba-p/4516858",
+      "published": "2026-05-06T16:37:02+00:00",
+      "summary": "This week Microsoft Foundry adds two major model families alongside a reasoning powerhouse that spans the full spectrum from specialized speech and vision to general-purpose coding and long-context analysis. IBM's Granite 4.1 is a famiily of 10: six LLMs across 3B, 8B, and 30B sizes in both...",
+      "blog": "Azure AI Foundry",
+      "blogId": "azure-ai-foundry-blog",
+      "author": "Osi"
+    },
+    {
+      "title": "Resilient by Design: Azure Databricks Disaster Recovery Strategy",
+      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/resilient-by-design-azure-databricks-disaster-recovery-strategy/ba-p/4516464",
+      "published": "2026-05-06T16:28:58+00:00",
+      "summary": "Introduction: From Recovery Plans to Resilience Strategy As organizations increasingly rely on Azure Databricks for mission-critical analytics and data engineering workloads, the need for robust disaster recovery (DR) strategies becomes paramount. These platforms are no longer just analytics...",
+      "blog": "Analytics on Azure",
+      "blogId": "analyticsonazure",
+      "author": "KonstantinaF"
+    },
+    {
+      "title": "From Chaos to Clarity: Your Databricks Workspace on a Single Pane of Glass",
+      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-chaos-to-clarity-your-databricks-workspace-on-a-single-pane/ba-p/4516805",
+      "published": "2026-05-06T16:25:47+00:00",
+      "summary": "The question that never stays answered — until now As Azure Databricks workspaces evolve, complexity creeps in unnoticed. Every Azure Databricks conversation with customers eventually lands on the same question: “What do we actually have in this workspace?” Over time, clusters multiply, jobs get...",
+      "blog": "Analytics on Azure",
+      "blogId": "analyticsonazure",
+      "author": "AmitDamle"
+    },
     {
       "title": "Building resilient networks for AI supercomputers",
       "link": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/building-resilient-networks-for-ai-supercomputers/ba-p/4516919",
-      "published": "2026-05-06T11:34:34+00:00",
+      "published": "2026-05-06T16:25:26+00:00",
       "summary": "By Valerie Cutts and Jithin Jose Last fall we introduced Fairwater, the world’s most powerful AI datacenter. Delivering a system of this scale required rethinking how Azure designs supercomputers, especially the scale-out network. Today, we are sharing more about the networking innovations that...",
       "blog": "High Performance Computing",
       "blogId": "azurehighperformancecomputingblog",
       "author": "jithinjose"
+    },
+    {
+      "title": "Announcing the Public Preview of Azure Cosmos DB Shell: Open-Source Power Meets AI-Driven Database Automation",
+      "link": "https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-shell-public-preview-ai-mcp-cli/",
+      "published": "2026-05-06T16:00:29+00:00",
+      "summary": "Today, we’re thrilled to announce the public preview of Azure Cosmos DB Shell – a powerful, open-source command-line interface that revolutionizes how developers interact with their Azure Cosmos DB databases. With integrated Model Context Protocol (MCP) server support, native agentic capabilities,...",
+      "blog": "Azure Cosmos DB Blog",
+      "blogId": "cosmosdbblog",
+      "author": "Sajeetharan Sinnathurai"
+    },
+    {
+      "title": "Introducing cert-manager for Azure Arc-enabled Kubernetes: now in Public Preview",
+      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/introducing-cert-manager-for-azure-arc-enabled-kubernetes-now-in/ba-p/4514549",
+      "published": "2026-05-06T15:30:00+00:00",
+      "summary": "Today we’re releasing a public preview of cert-manager for Azure Arc-enabled Kubernetes. It’s an Arc extension that automates TLS certificate and trust bundle management for edge Kubernetes clusters. If you’re running Kubernetes at the edge: in factories, retail stores, remote sites, you’ve...",
+      "blog": "Azure Arc",
+      "blogId": "azurearcblog",
+      "author": "NicolasMondada"
     },
     {
       "title": "Turning GitHub Copilot into a “Best Practices Coach” with Copilot Spaces + a Markdown Knowledge Base",
@@ -57,15 +201,6 @@
       "author": "micahmckittrick"
     },
     {
-      "title": "Better together with Azure WAF + Microsoft Defender for Storage + Defender for Azure SQL Databases",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/better-together-with-azure-waf-microsoft-defender-for-storage/ba-p/4517101",
-      "published": "2026-05-05T21:54:36+00:00",
-      "summary": "Authored by: Fernanda_Vela​ , saikishor​, Yura_Lee​ Reviewed by: YuriDiogenes​, Mohit_Kumar​, Amir_Dahan​, eitanbremler​ , Kitt_Weatherman​ Introduction Often, customers ask why additional workload protection is needed when a web application firewall is already in place. Azure Web Application...",
-      "blog": "Microsoft Defender for Cloud",
-      "blogId": "microsoftdefendercloudblog",
-      "author": "Yura_Lee"
-    },
-    {
       "title": "Introducing OpenAI's newest chat model in Microsoft Foundry",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-openai-s-newest-chat-model-in-microsoft-foundry/ba-p/4516848",
       "published": "2026-05-05T21:42:50+00:00",
@@ -73,6 +208,15 @@
       "blog": "Azure AI Foundry",
       "blogId": "azure-ai-foundry-blog",
       "author": "Naomi Moneypenny"
+    },
+    {
+      "title": "Azure Cosmos DB Conf 2026 Recap: Lessons from Production",
+      "link": "https://devblogs.microsoft.com/blog/azure-cosmos-db-conf-2026-recap-lessons-from-production",
+      "published": "2026-05-05T19:30:25+00:00",
+      "summary": "A team was running at 100% RU utilization. Throttles were compounding into retries. P99 latency was degrading. The assumption was obvious: provision more throughput. They didn’t. Instead, they found a single logical partition absorbing more than 80% of traffic. After fixing the data model—without...",
+      "blog": "Microsoft Developers Blog",
+      "blogId": "msdevblog",
+      "author": "Mark Brown"
     },
     {
       "title": "Update host keys to use SFTP on Azure Blob Storage",
@@ -273,15 +417,6 @@
       "author": "Vybava_Ramadoss"
     },
     {
-      "title": "Retired Azure Reserved Virtual Machine Instances Transition Guide",
-      "link": "https://techcommunity.microsoft.com/t5/azure-compute-blog/retired-azure-reserved-virtual-machine-instances-transition/ba-p/4516505",
-      "published": "2026-05-04T15:59:33+00:00",
-      "summary": "Summary This guide is designed for customers with Azure Reserved Virtual Machine Instances (RIs) that will no longer be available for new purchase or renewal starting July 1, 2026 for select VM series. It helps you understand the impact of these changes and plan next steps to maintain cost...",
-      "blog": "Azure Compute",
-      "blogId": "azurecompute",
-      "author": "kyleikeda"
-    },
-    {
       "title": "Running GitHub Actions Runners on Azure Container Apps with KEDA Autoscaling",
       "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/running-github-actions-runners-on-azure-container-apps-with-keda/ba-p/4512980",
       "published": "2026-05-04T13:03:30+00:00",
@@ -325,6 +460,15 @@
       "blog": "Core Infrastructure & Security",
       "blogId": "coreinfrastructureandsecurityblog",
       "author": "RonArestia"
+    },
+    {
+      "title": "Continuous Profiling on AKS with Pyroscope, Blob Storage, and Managed Grafana",
+      "link": "https://azureglobalblackbelts.com/2026/05/06/continuous-profiling-on-AKS-with-pyroscope-blob-storage-and-managed-grafana",
+      "published": "2026-05-04T00:00:00+00:00",
+      "summary": "Deploy Grafana Pyroscope on AKS with Azure Blob Storage for long-term profile retention and Azure Managed Grafana for visualization.",
+      "blog": "Azure Global Black Belt Blog",
+      "blogId": "gbblog",
+      "author": "Microsoft"
     },
     {
       "title": "Removing The Monkey Work of Migration",
@@ -487,15 +631,6 @@
       "blog": "Visual Studio Blog",
       "blogId": "visualstudio",
       "author": "Sayed Ibrahim Hashimi"
-    },
-    {
-      "title": "Prefix-scoped access for User Delegation SAS is now generally available for Azure Blob Storage",
-      "link": "https://techcommunity.microsoft.com/t5/azure-storage-blog/prefix-scoped-access-for-user-delegation-sas-is-now-generally/ba-p/4516010",
-      "published": "2026-04-30T17:00:00+00:00",
-      "summary": "We would like to share that prefix-scoped access for User Delegation SAS for Azure Blob Storage is generally available in all Azure regions. SAS tokens for Blob Storage have historically supported two levels of scope: container and individual blob. With this release, you can now scope access to a...",
-      "blog": "Azure Storage",
-      "blogId": "azurestorageblog",
-      "author": "despindola"
     },
     {
       "title": "Introducing Post-Stream Refinement: Higher-Accuracy Real-Time Transcription",
@@ -883,15 +1018,6 @@
       "blog": "Windows Command Line",
       "blogId": "commandline",
       "author": "Niels Laute"
-    },
-    {
-      "title": "Deploying Azure Redis Enterprise with Geo-Replication Using Terraform",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-azure-redis-enterprise-with-geo-replication-using/ba-p/4515317",
-      "published": "2026-04-28T07:03:41+00:00",
-      "summary": "This post walks through a production‑proven pattern for running stateful services across Azure regions using Terraform. We’ll cover a primary–replica Redis architecture, regional isolation with Key Vault and networking, and a clean Terraform parameterization strategy that scales from development to...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "vsakash"
     },
     {
       "title": "The Future of Agentic AI: Inside Microsoft Agent Framework 1.0",
@@ -1695,15 +1821,6 @@
       "author": "NaufalPrawironegoro"
     },
     {
-      "title": "MCP Demystified: Tools vs Resources vs Prompts Explained Simply",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-demystified-tools-vs-resources-vs-prompts-explained-simply/ba-p/4508057",
-      "published": "2026-04-18T04:00:00+00:00",
-      "summary": "Introduction When developers start working with Model Context Protocol (MCP), one of the most confusing parts is understanding the difference between MCP Tools, Resources, and Prompts. All three are important components in modern AI application development, but they serve completely different...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "Ravindra_Kumar_Vishwakarma"
-    },
-    {
       "title": "Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local",
       "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951",
       "published": "2026-04-17T15:23:10+00:00",
@@ -2055,15 +2172,6 @@
       "author": "Naomi Moneypenny"
     },
     {
-      "title": "Building Real-Time Speech Translation with AI Avatars with Azure Speech Services",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/building-real-time-speech-translation-with-ai-avatars-with-azure/ba-p/4490972",
-      "published": "2026-04-14T15:45:00+00:00",
-      "summary": "Introduction Language barriers remain one of the biggest challenges in communication. Whether you are holding an all-hands meeting for a globally distributed team, consulting with non-native speaking patients, or teaching students across continents—seamless, real-time translation makes or breaks...",
-      "blog": "Azure AI Foundry",
-      "blogId": "azure-ai-foundry-blog",
-      "author": "sudarsan"
-    },
-    {
       "title": "GA: DCasv6 and ECasv6 confidential VMs based on 4th Generation AMD EPYC™ processors",
       "link": "https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460",
       "published": "2026-04-13T15:29:32+00:00",
@@ -2359,96 +2467,6 @@
       "blog": "Azure Cosmos DB Blog",
       "blogId": "cosmosdbblog",
       "author": "Manish Sharma"
-    },
-    {
-      "title": "Take full control of your floating windows in Visual Studio",
-      "link": "https://devblogs.microsoft.com/visualstudio/take-full-control-of-your-floating-windows-in-visual-studio/",
-      "published": "2026-04-07T14:00:39+00:00",
-      "summary": "Make Visual Studio floating windows work perfectly with PowerToys FancyZones. Flip one option to get independent windows, better snapping, and less friction. The post Take full control of your floating windows in Visual Studio appeared first on Visual Studio Blog.",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Mads Kristensen"
-    },
-    {
-      "title": "Discover and assess File Shares for migration to Azure Files with Azure Migrate",
-      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-file-shares-for-migration-to-azure-files/ba-p/4509034",
-      "published": "2026-04-07T07:00:08+00:00",
-      "summary": "When organizations migrate to the cloud, applications are at the center of every decision. And behind every application is data, stored in file shares, accessed by users and services, and critical to keeping the application running. Moving that data seamlessly is not optional; it is a fundamental...",
-      "blog": "Azure Migration",
-      "blogId": "azuremigrationblog",
-      "author": "ankitsurkar"
-    },
-    {
-      "title": "AI Inference on AKS enabled by Azure Arc: Predictive AI using Triton and ResNet-50",
-      "link": "https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-4",
-      "published": "2026-04-07T00:01:03+00:00",
-      "summary": "Run predictive AI at the edge by deploying Triton with the ONNX backend on AKS enabled by Azure Arc for local ResNet 50 GPU inference without cloud dependency.",
-      "blog": "AKS Blog",
-      "blogId": "aksblog",
-      "author": "Microsoft"
-    },
-    {
-      "title": "AI Inference on AKS enabled by Azure Arc: Generative AI with Open‑Source LLM Server",
-      "link": "https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-3",
-      "published": "2026-04-07T00:01:02+00:00",
-      "summary": "Run generative AI at the edge with Ollama and vLLM on AKS enabled by Azure Arc, enabling local LLM inference on GPU hardware without dependency or data egress.",
-      "blog": "AKS Blog",
-      "blogId": "aksblog",
-      "author": "Microsoft"
-    },
-    {
-      "title": "AI Inference on AKS enabled by Azure Arc: Series Introduction and Scope",
-      "link": "https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-2",
-      "published": "2026-04-07T00:01:01+00:00",
-      "summary": "Scenario driven series for generative and predictive AI inference on AKS enabled by Azure Arc, across CPUs, GPUs, and NPUs in on-premises and edge environments.",
-      "blog": "AKS Blog",
-      "blogId": "aksblog",
-      "author": "Microsoft"
-    },
-    {
-      "title": "AI Inference on AKS enabled by Azure Arc: Bringing AI to the Edge and On‑Premises",
-      "link": "https://blog.aks.azure.com/2026/04/07/ai-inference-on-aks-arc-part-1",
-      "published": "2026-04-07T00:01:00+00:00",
-      "summary": "Learn how to bring AI inference closer to your data with AKS enabled by Azure Arc, with practical hybrid and edge scenarios for secure, low-latency workloads.",
-      "blog": "AKS Blog",
-      "blogId": "aksblog",
-      "author": "Microsoft"
-    },
-    {
-      "title": "Introducing the New Microsoft Sentinel Logstash Output Plugin (Public Preview!)",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-new-microsoft-sentinel-logstash-output-plugin/ba-p/4508904",
-      "published": "2026-04-06T22:28:06+00:00",
-      "summary": "Many organizations rely on Logstash as a flexible, trusted data pipeline for collecting, transforming, and forwarding logs from on-premises and hybrid environments. Microsoft Sentinel has long supported a Logstash output plugin, enabling customers to send data directly into Sentinel as part of...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "JamesAde"
-    },
-    {
-      "title": "Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript",
-      "link": "https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-20-x-in-the-azure-sdk-for-javascript/",
-      "published": "2026-04-06T20:52:46+00:00",
-      "summary": "After July 9, 2026, the Azure SDK for JavaScript will no longer support Node.js 20.x. Upgrade to an Active Node.js Long Term Support (LTS) version to stay secure and up-to-date. The post Announcing the end of support for Node.js 20.x in the Azure SDK for JavaScript appeared first on Azure SDK Blog.",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "Minh-Anh Phan"
-    },
-    {
-      "title": "Announcing Public Preview for Essential Machine Management",
-      "link": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-essential-machine-management/ba-p/4502721",
-      "published": "2026-04-06T18:54:19+00:00",
-      "summary": "Managing servers and VMs across Azure, on premises, and multi-cloud environments often means turning on core capabilities—monitoring, updates, inventory, and configuration—through separate setup experiences. We’ve heard feedback that this makes it harder to get visibility into machine state and...",
-      "blog": "Governance & Management",
-      "blogId": "azuregovernanceandmanagementblog",
-      "author": "Meagan McCrory"
-    },
-    {
-      "title": "MCP Apps on Azure Functions: Quickstart with TypeScript",
-      "link": "https://devblogs.microsoft.com/azure-sdk/mcp-apps-on-azure-functions-quickstart-with-typescript/",
-      "published": "2026-04-06T15:01:58+00:00",
-      "summary": "Learn how to build and deploy MCP (Model Context Protocol) apps on Azure Functions using TypeScript. This guide covers MCP tools, resources, local development, and serverless deployment with a practical weather app example. The post MCP Apps on Azure Functions: Quickstart with TypeScript appeared...",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "Swapnil Nagar"
     }
   ]
 }
