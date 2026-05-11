@@ -1,7 +1,52 @@
 {
-  "lastUpdated": "2026-05-10T13:15:55.650870+00:00",
-  "totalArticles": 261,
+  "lastUpdated": "2026-05-11T14:47:18.090333+00:00",
+  "totalArticles": 260,
   "articles": [
+    {
+      "title": "Scaling GitHub Advanced Security in Azure DevOps with a single reusable YAML template",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/scaling-github-advanced-security-in-azure-devops-with-a-single/ba-p/4518410",
+      "published": "2026-05-11T10:47:04+00:00",
+      "summary": "Scaling GitHub Advanced Security in Azure DevOps with a single reusable YAML template Managing security scanning across dozens of repositories can quickly become complex—especially when each repository uses different languages, frameworks, and infrastructure patterns. In our environment, we needed...",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "Paulams732"
+    },
+    {
+      "title": "From Test Cases to Trusted Automation: Scaling Enterprise Quality with GitHub Copilot",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-test-cases-to-trusted-automation-scaling-enterprise-quality/ba-p/4512843",
+      "published": "2026-05-11T07:00:00+00:00",
+      "summary": "Automation First, But Trust Is Earned Enterprise QA teams today are automation‑led by default. Regression suites run daily, API tests validate integrations, and UI automation protects critical workflows. Yet, many teams still struggle with: Automation suites that lag behind changing requirements...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "SagarPatra"
+    },
+    {
+      "title": "Triggering Azure Functions from Blob Storage Using Event Grid",
+      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/triggering-azure-functions-from-blob-storage-using-event-grid/ba-p/4518184",
+      "published": "2026-05-11T07:00:00+00:00",
+      "summary": "Overview Modern workloads increasingly rely on reacting to files as soon as they arrive in Azure Blob Storage. While Azure provides multiple ways to trigger computing from blob operations, choosing the right event-driven pattern is not always straightforward—especially in enterprise environments...",
+      "blog": "Core Infrastructure & Security",
+      "blogId": "coreinfrastructureandsecurityblog",
+      "author": "AndrewCoughlin"
+    },
+    {
+      "title": "Understanding the deployment quota limitation (800) Error in Azure Bicep and ARM Deployments",
+      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/understanding-the-deployment-quota-limitation-800-error-in-azure/ba-p/4518262",
+      "published": "2026-05-11T05:12:56+00:00",
+      "summary": "Understanding deployment quota limitation (800) Error in Azure Deployments (Bicep/ARM) Introduction When working with Infrastructure as Code (IaC) using Azure Bicep or ARM templates, deployment failures are a common part of day-to-day operations—especially in large-scale enterprise environments....",
+      "blog": "Azure Infrastructure",
+      "blogId": "azureinfrastructureblog",
+      "author": "ranjan_ashish"
+    },
+    {
+      "title": "Configure DNS forwarding for Azure NetApp Files",
+      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/configure-dns-forwarding-for-azure-netapp-files/ba-p/4516381",
+      "published": "2026-05-11T04:20:10+00:00",
+      "summary": "This post has been written with the collaboration of Rizul Khanna Applies to: Azure NetApp Files — SMB, dual-protocol, and NFSv4.1 Kerberos volumes deployed in hub-spoke or Azure Virtual WAN topologies using an external private DNS forwarder. Overview Azure NetApp Files (ANF) has a hard dependency...",
+      "blog": "Azure Architecture",
+      "blogId": "azurearchitectureblog",
+      "author": "mkachare"
+    },
     {
       "title": "Turning GitHub Copilot into a “Best Practices Coach” with Copilot Spaces + a Markdown Knowledge Base",
       "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/turning-github-copilot-into-a-best-practices-coach-with-copilot/ba-p/4511567",
@@ -921,15 +966,6 @@
       "author": "dbandaru"
     },
     {
-      "title": "Building an Enterprise-Grade SQL Platform on Kubernetes using Crossplane and Azure PostgreSQL",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-an-enterprise-grade-sql-platform-on-kubernetes-using/ba-p/4515635",
-      "published": "2026-04-29T16:58:37+00:00",
-      "summary": "Strategic Overview Build a Kubernetes-native SQL platform using Crossplane-based database operator to provision Azure PostgreSQL Flexible Server. Active–Passive, multi-region database architecture using read replicas and manual promotion for failover. Private networking, DNS abstraction, and...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "prabhattomar"
-    },
-    {
       "title": "Azure Monitor Service Level Indicators (SLI)",
       "link": "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-service-level-indicators-sli/ba-p/4507445",
       "published": "2026-04-29T16:16:56+00:00",
@@ -955,15 +991,6 @@
       "blog": "Visual Studio Blog",
       "blogId": "visualstudio",
       "author": "Matt Clark"
-    },
-    {
-      "title": "Migrating Splunk Logs to Azure Application Insights on VMs",
-      "link": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-splunk-logs-to-azure-application-insights-on-vms/ba-p/4515866",
-      "published": "2026-04-29T11:35:03+00:00",
-      "summary": "Phase 0 – Understanding the Current Environment Before touching any code or agents, map out the existing architecture. Current setup: Applications write logs via log4net → local log files on VMs Splunk Universal Forwarders read logs → send to Splunk Indexers Splunk dashboards, alerts, and...",
-      "blog": "Azure Infrastructure",
-      "blogId": "azureinfrastructureblog",
-      "author": "skundapura"
     },
     {
       "title": "AG-UI: The Future of Agent-Driven User Interfaces",
@@ -1776,15 +1803,6 @@
       "author": "jainsourabh"
     },
     {
-      "title": "From Playwright Automation to Agent Driven Testing (GHCP in Action)",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-playwright-automation-to-agent-driven-testing-ghcp-in/ba-p/4507395",
-      "published": "2026-04-21T05:00:00+00:00",
-      "summary": "What Is Agent-Driven Testing? Agent-driven testing represents a revolutionary shift from traditional, hardcoded test automation to intelligent, adaptive testing powered by AI agents. Unlike conventional Playwright tests that rely on static selectors and predefined workflows, agent-driven testing...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "syedarshad"
-    },
-    {
       "title": "Service Bus SBMP Retirement: What BizTalk Server 2020 Customers Need to Know",
       "link": "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/service-bus-sbmp-retirement-what-biztalk-server-2020-customers/ba-p/4513155",
       "published": "2026-04-21T01:02:21+00:00",
@@ -2323,33 +2341,6 @@
       "blog": "Core Infrastructure & Security",
       "blogId": "coreinfrastructureandsecurityblog",
       "author": "BrandonWilson"
-    },
-    {
-      "title": "Securing multicloud (Azure, AWS & GCP) with Microsoft Defender for Cloud: Connector best practices",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/securing-multicloud-azure-aws-gcp-with-microsoft-defender-for/ba-p/4508563",
-      "published": "2026-04-10T18:03:39+00:00",
-      "summary": "Many organizations run workloads across multiple cloud providers and need to maintain a strong security posture while ensuring interoperability. Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) solution that helps secure these environments by providing unified...",
-      "blog": "Microsoft Defender for Cloud",
-      "blogId": "microsoftdefendercloudblog",
-      "author": "ckyalo"
-    },
-    {
-      "title": "Announcing Azure MCP Server 2.0 Stable Release for Self-Hosted Agentic Cloud Automation",
-      "link": "https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-2-0-stable-release/",
-      "published": "2026-04-10T17:16:10+00:00",
-      "summary": "Azure MCP Server 2.0 is now generally available, delivering first-class self-hosting, stronger security hardening, and a faster foundation for agentic workflows across Azure. The post Announcing Azure MCP Server 2.0 Stable Release for Self-Hosted Agentic Cloud Automation appeared first on Azure SDK...",
-      "blog": "Azure SDK Blog",
-      "blogId": "azuresdkblog",
-      "author": "Sandeep Sen"
-    },
-    {
-      "title": "How to Ingest Microsoft Intune Logs into Microsoft Sentinel",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-to-ingest-microsoft-intune-logs-into-microsoft-sentinel/ba-p/4508562",
-      "published": "2026-04-10T16:00:00+00:00",
-      "summary": "For many organizations using Microsoft Intune to manage devices, integrating Intune logs into Microsoft Sentinel is an essential for security operations (Incorporate the device into the SEIM). By routing Intune’s device management and compliance data into your central SIEM, you gain a unified view...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "PaulineMbabu"
     }
   ]
 }
