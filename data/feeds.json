@@ -1,7 +1,43 @@
 {
-  "lastUpdated": "2026-05-15T14:04:20.837060+00:00",
-  "totalArticles": 273,
+  "lastUpdated": "2026-05-16T13:19:17.933222+00:00",
+  "totalArticles": 264,
   "articles": [
+    {
+      "title": "What's new in FinOps toolkit 14 – April 2026",
+      "link": "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-14-april-2026/ba-p/4519497",
+      "published": "2026-05-15T23:53:55+00:00",
+      "summary": "FinOps toolkit 14 connects AI to your FinOps hub data with a Copilot Studio agent template, ingests recommendations from Azure Advisor and your own Resource Graph queries, simplifies hub deployment, and previews a new commitment discount eligibility dataset. Whether you consider yourself a FinOps...",
+      "blog": "FinOps",
+      "blogId": "finopsblog",
+      "author": "Michael_Flanakin"
+    },
+    {
+      "title": "Introducing DeepSeek V4 Flash and V4 Pro in Microsoft Foundry",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-deepseek-v4-flash-and-v4-pro-in-microsoft-foundry/ba-p/4515174",
+      "published": "2026-05-15T21:58:59+00:00",
+      "summary": "As AI adoption matures, the conversation is shifting from model capability to system design, how to orchestrate models that deliver the right balance of quality, speed, and cost. We’re expanding the Microsoft Foundry model catalog with DeepSeek V4 Flash and DeepSeek V4 Pro. It enables teams to...",
+      "blog": "Azure AI Foundry",
+      "blogId": "azure-ai-foundry-blog",
+      "author": "RashaudSavage"
+    },
+    {
+      "title": "From Copilots to Coworkers: How AI Agents Are Transforming Azure Networking Operations",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-copilots-to-coworkers-how-ai-agents-are-transforming-azure/ba-p/4519850",
+      "published": "2026-05-15T17:45:28+00:00",
+      "summary": "Microsoft's Customer Zero blog series gives an insider view of how Microsoft builds and operates Microsoft using our trusted, enterprise-grade IQ platform. Learn best practices from our engineering teams with real-world lessons, architectural patterns, and operational strategies for pressure-tested...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "dbillor"
+    },
+    {
+      "title": "Designing AI-Driven Observability for Trustworthy Agentic AI Systems",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/designing-ai-driven-observability-for-trustworthy-agentic-ai/ba-p/4508844",
+      "published": "2026-05-15T16:24:30+00:00",
+      "summary": "1.Why Observability Changes in Agentic AI Systems A developer recently recounted how a single runaway AI agent loop burned through $500 in OpenAI API charges in just 45 minutes with no errors or alerts raised anywhere in the monitoring stack. That anecdote is not an edge case; as Microsoft's own...",
+      "blog": "Azure AI Foundry",
+      "blogId": "azure-ai-foundry-blog",
+      "author": "shrutikakade"
+    },
     {
       "title": "New SSH helper aliases for Python apps on Azure App Service for Linux",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-ssh-helper-aliases-for-python-apps-on-azure-app-service-for/ba-p/4520111",
@@ -217,15 +253,6 @@
       "blog": "Apps on Azure",
       "blogId": "appsonazureblog",
       "author": "NandiniMuralidharan"
-    },
-    {
-      "title": "What's new in FinOps toolkit 14 – April 2026",
-      "link": "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-14-april-2026/ba-p/4519497",
-      "published": "2026-05-13T23:24:44+00:00",
-      "summary": "FinOps toolkit 14 connects AI to your FinOps hub data with a Copilot Studio agent template, ingests recommendations from Azure Advisor and your own Resource Graph queries, simplifies hub deployment, and previews a new commitment discount eligibility dataset. Whether you consider yourself a FinOps...",
-      "blog": "FinOps",
-      "blogId": "finopsblog",
-      "author": "Michael_Flanakin"
     },
     {
       "title": "Microsoft SQL Security Across the MAESTRO Stack: Building Secure Agentic AI with Defense-in-Depth",
@@ -604,15 +631,6 @@
       "blog": "Azure SQL Dev Corner",
       "blogId": "azuresqlblog",
       "author": "Aaron Saidi"
-    },
-    {
-      "title": "Introducing DeepSeek V4 Flash and V4 Pro in Microsoft Foundry",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/introducing-deepseek-v4-flash-and-v4-pro-in-microsoft-foundry/ba-p/4515174",
-      "published": "2026-05-08T18:36:59+00:00",
-      "summary": "As AI adoption matures, the conversation is shifting from model capability to system design, how to orchestrate models that deliver the right balance of quality, speed, and cost. Today, we’re expanding the Microsoft Foundry model catalog with DeepSeek V4 Flash, and DeepSeek V4 Pro coming soon. It...",
-      "blog": "Azure AI Foundry",
-      "blogId": "azure-ai-foundry-blog",
-      "author": "RashaudSavage"
     },
     {
       "title": "Inspektor Gadget Completes Its First Independent Security Audit",
@@ -1992,15 +2010,6 @@
       "author": "kirankumar_manchiwar04"
     },
     {
-      "title": "Three tiers of Agentic AI - and when to use none of them",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-foundry-blog/three-tiers-of-agentic-ai-and-when-to-use-none-of-them/ba-p/4510377",
-      "published": "2026-04-22T16:00:00+00:00",
-      "summary": "Every enterprise has an AI agent. Almost none of them work in production. Walk into any enterprise technology review right now and you will find the same thing. Pilots running. Demos recorded. Steering committees impressed. And somewhere in the background, a quiet acknowledgment that the thing does...",
-      "blog": "Azure AI Foundry",
-      "blogId": "azure-ai-foundry-blog",
-      "author": "sgangaramani"
-    },
-    {
       "title": "Understanding the Standard HDD I/O unit size update and what it means for your workloads",
       "link": "https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128",
       "published": "2026-04-22T15:18:03+00:00",
@@ -2017,15 +2026,6 @@
       "blog": "Azure DevOps Blog",
       "blogId": "azuredevops",
       "author": "Panagiotis Liaros"
-    },
-    {
-      "title": "NFS Permission Denied in Azure App Service on Linux: What It Means and What to Do",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/nfs-permission-denied-in-azure-app-service-on-linux-what-it/ba-p/4513627",
-      "published": "2026-04-22T07:31:52+00:00",
-      "summary": "If your Azure App Service on Linux uses an Azure Files NFS share, you may sometimes see errors like Permission denied or Errno 13 when your app tries to write to the mounted path. Azure Files supports NFS for Linux and Unix workloads, and NFS uses Unix-style numeric ownership and permissions...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "michelleyau"
     },
     {
       "title": "Getting Started with the SUSE Multi-Linux Manager MCP Server and GitHub Copilot",
@@ -2377,87 +2377,6 @@
       "blog": "Microsoft Sentinel",
       "blogId": "microsoftsentinelblog",
       "author": "Yossi Basha"
-    },
-    {
-      "title": "Announcing One‑Command Backup Configuration for AKS with Azure Backup",
-      "link": "https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-one-command-backup-configuration-for-aks-with-azure/ba-p/4511852",
-      "published": "2026-04-16T07:50:59+00:00",
-      "summary": "Running production workloads on Azure Kubernetes Service (AKS) is becoming the norm for platform teams building cloud‑native applications at scale. As these environments increasingly host stateful workloads using persistent volumes, ensuring data protection and rapid recovery becomes...",
-      "blog": "Governance & Management",
-      "blogId": "azuregovernanceandmanagementblog",
-      "author": "shobhitgarg"
-    },
-    {
-      "title": "Production Cutover in Cloud-Native Migrations",
-      "link": "https://techcommunity.microsoft.com/t5/azure-migration-and/production-cutover-in-cloud-native-migrations/ba-p/4509924",
-      "published": "2026-04-16T00:05:46+00:00",
-      "summary": "Migration Planning vs Runtime Reality Migration to container orchestration platforms such as Azure Kubernetes Service (AKS) typically involves: Containerizing application workloads Configuring cluster networking Migrating data to managed storage services Updating application integrations Validating...",
-      "blog": "Azure Migration",
-      "blogId": "azuremigrationblog",
-      "author": "dhruti"
-    },
-    {
-      "title": "Databricks Delta Sharing: Enabling Cost Efficient Cross Cloud Data Access",
-      "link": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/databricks-delta-sharing-enabling-cost-efficient-cross-cloud/ba-p/4511400",
-      "published": "2026-04-16T00:00:42+00:00",
-      "summary": "What Is Delta Sharing? Delta sharing is an open protocol for secure data sharing that allows organizations to share live data stored in Delta Lake with external consumers—across cloud providers such as Azure, AWS, and Google Cloud—while keeping the data in its original location. Consumers access...",
-      "blog": "Azure Architecture",
-      "blogId": "azurearchitectureblog",
-      "author": "kirankumar_manchiwar04"
-    },
-    {
-      "title": "Enforce Cost Limits on KQL Queries and Notebooks in the Microsoft Sentinel Data Lake",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/enforce-cost-limits-on-kql-queries-and-notebooks-in-the/ba-p/4511329",
-      "published": "2026-04-15T20:26:56+00:00",
-      "summary": "Security teams face a constant tension: run the advanced analytics you need to stay ahead of threats, or hold back to keep costs predictable. Until now, Microsoft Sentinel let you set alerts to get notified when data lake usage approached a threshold — useful for awareness, but not enough to...",
-      "blog": "Microsoft Sentinel",
-      "blogId": "microsoftsentinelblog",
-      "author": "shubh_khandhadia"
-    },
-    {
-      "title": "Azure MCP tools now ship built into Visual Studio 2022 — no extension required",
-      "link": "https://devblogs.microsoft.com/visualstudio/azure-mcp-tools-now-ship-built-into-visual-studio-2022-no-extension-required/",
-      "published": "2026-04-15T17:30:28+00:00",
-      "summary": "Azure MCP tools now ship built into Visual Studio 2022 — no extension required Azure MCP tools are now built into Visual Studio 2022 as part of the Azure development workload — no separate extension to find, install, or update. You can enable over 230 tools across 45 Azure services directly in...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Yun Jung Choi"
-    },
-    {
-      "title": "From fragmented sites to consistent governance: Azure Arc patterns for adaptive cloud strategy.",
-      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/from-fragmented-sites-to-consistent-governance-azure-arc/ba-p/4510110",
-      "published": "2026-04-15T17:11:28+00:00",
-      "summary": "In Manufacturing companies, hybrid architectures aren’t transitional—they’re persistent. Most large manufacturers operate across remote plants, branch sites, private datacenters, and Azure. The main challenge manufacturers face isn’t adopting cloud services, it is preventing long‑term operational...",
-      "blog": "Azure Arc",
-      "blogId": "azurearcblog",
-      "author": "sakshimalhotra"
-    },
-    {
-      "title": "Stop Hunting Bugs: Meet the New Visual Studio Debugger Agent Workflow",
-      "link": "https://devblogs.microsoft.com/visualstudio/stop-hunting-bugs-meet-the-new-visual-studio-debugger-agent/",
-      "published": "2026-04-15T16:00:15+00:00",
-      "summary": "We’ve all been there: a bug report lands in your inbox with a title like “App crashes sometimes” and zero reproduction steps. Your morning, which was supposed to be spent building new features, is now a forensic investigation. You’re setting scattershot breakpoints, staring at the call stack, and...",
-      "blog": "Visual Studio Blog",
-      "blogId": "visualstudio",
-      "author": "Harshada Hole"
-    },
-    {
-      "title": "Enabling fallback to internet for Azure Private DNS Zones in hybrid architectures",
-      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/enabling-fallback-to-internet-for-azure-private-dns-zones-in/ba-p/4511131",
-      "published": "2026-04-15T15:57:15+00:00",
-      "summary": "Introduction Azure Private Endpoint enables secure connectivity to Azure PaaS services such as: Azure SQL Managed Instance Azure Container Registry Azure Key Vault Azure Storage Account through private IP addresses within a virtual network. When Private Endpoint is enabled for a service, Azure DNS...",
-      "blog": "Azure Networking",
-      "blogId": "azurenetworkingblog",
-      "author": "kirankumar_manchiwar04"
-    },
-    {
-      "title": "One-click security scanning and org-wide alert triage come to Advanced Security",
-      "link": "https://devblogs.microsoft.com/devops/one-click-security-scanning-and-org-wide-alert-triage-come-to-advanced-security/",
-      "published": "2026-04-15T15:06:53+00:00",
-      "summary": "We’re shipping two major capabilities that change how security teams enable and act on application security in Azure DevOps: CodeQL default setup makes it possible to enable code scanning across your organization without configuring a single pipeline, and a new combined alerts experience in...",
-      "blog": "Azure DevOps Blog",
-      "blogId": "azuredevops",
-      "author": "Laura Jiang"
     }
   ]
 }
