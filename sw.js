@@ -1,4 +1,4 @@
-const CACHE_NAME = "mssecnews-v2";
+const CACHE_NAME = "mssecnews-v3";
 
 const STATIC_ASSETS = [
   "/",
@@ -6,15 +6,20 @@ const STATIC_ASSETS = [
   "/css/styles.css",
   "/js/app.js",
   "/manifest.json",
-  "/data/feeds.json",
-  "/data/feed.xml"
+  "/favicon.ico",
+  "/security-libre-devops-black.png",
+  "/security-libre-devops-white.png",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
-    })
+    caches.open(CACHE_NAME).then((cache) =>
+      Promise.allSettled(
+        STATIC_ASSETS.map((asset) => cache.add(asset))
+      )
+    )
   );
 
   self.skipWaiting();
@@ -45,7 +50,7 @@ self.addEventListener("fetch", (event) => {
     url.pathname.includes("/data/feeds.json") ||
     url.pathname.includes("/data/feed.xml");
 
-  // Always try fresh content for feed data
+  // Always fetch fresh feed content first
   if (isFeedData) {
     event.respondWith(
       fetch(event.request)
@@ -66,27 +71,32 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Cache-first for app assets
+  // Cache-first strategy for static site assets
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) {
         return cached;
       }
 
-      return fetch(event.request).then((response) => {
-        if (
-          response.ok &&
-          url.origin === self.location.origin
-        ) {
-          const clone = response.clone();
+      return fetch(event.request)
+        .then((response) => {
+          if (
+            response.ok &&
+            url.origin === self.location.origin
+          ) {
+            const clone = response.clone();
 
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, clone);
-          });
-        }
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, clone);
+            });
+          }
 
-        return response;
-      });
+          return response;
+        })
+        .catch(() => {
+          // Optional offline fallback later
+          return caches.match("/index.html");
+        });
     })
   );
 });

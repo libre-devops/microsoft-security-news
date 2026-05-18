@@ -29,6 +29,8 @@
     "purview": "#0891B2",
     "intune": "#0D9488",
     "msrc": "#DC2626",
+    "security-copilot": "#06B6D4",
+    "ai-security": "#EC4899",
     "general-security": "#64748B",
   };
 
@@ -43,6 +45,7 @@
     "governance-compliance": "#0F766E",
     "vulnerability-management": "#EA580C",
     "security-operations": "#7C3AED",
+    "ai-security": "#EC4899",
     "general-security": "#64748B",
   };
 
@@ -254,9 +257,11 @@
         case "today":
           cutoff.setHours(0, 0, 0, 0);
           break;
+
         case "week":
           cutoff.setDate(now.getDate() - 7);
           break;
+
         case "month":
           cutoff.setMonth(now.getMonth() - 1);
           break;
@@ -319,6 +324,7 @@
     const isBookmarked = bookmarks.has(article.link);
 
     const date = new Date(article.published);
+
     const dateStr = date.toLocaleDateString("en-GB", {
       day: "numeric",
       month: "short",

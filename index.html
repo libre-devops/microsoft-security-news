@@ -8,7 +8,7 @@
 
     <meta
         name="description"
-        content="Daily aggregated Microsoft security news, advisories, threat intelligence, and product intelligence."
+        content="Daily aggregated Microsoft security, AI security, threat intelligence, advisories, and product intelligence."
     >
 
     <!-- Open Graph -->
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Microsoft Security News">
     <meta
         property="og:description"
-        content="Daily aggregated Microsoft security news, advisories, threat intelligence, and product intelligence."
+        content="Daily aggregated Microsoft security, AI security, threat intelligence, advisories, and product intelligence."
     >
     <meta property="og:url" content="https://security.libredevops.org">
 
@@ -25,7 +25,7 @@
     <meta name="twitter:title" content="Microsoft Security News">
     <meta
         name="twitter:description"
-        content="Daily aggregated Microsoft security news, advisories, threat intelligence, and product intelligence."
+        content="Daily aggregated Microsoft security, AI security, threat intelligence, advisories, and product intelligence."
     >
 
     <!-- PWA -->
@@ -33,11 +33,11 @@
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
 
-    <!-- RSS -->
+    <!-- RSS autodiscovery -->
     <link
         rel="alternate"
         type="application/rss+xml"
-        title="Microsoft Security News"
+        title="Microsoft Security News RSS Feed"
         href="data/feed.xml"
     >
 
@@ -92,7 +92,7 @@
             <div>
                 <h1>Microsoft Security News</h1>
                 <span class="subtitle">
-                    Security intelligence dashboard · Microsoft ecosystem
+                    Security intelligence dashboard · Microsoft security, AI, and threat intelligence
                 </span>
             </div>
         </div>
@@ -103,10 +103,20 @@
                 <input
                     type="text"
                     id="search-input"
-                    placeholder="Search products, domains, advisories..."
+                    placeholder="Search products, AI security, advisories, domains..."
                     autocomplete="off"
                 >
             </div>
+
+            <a
+                href="data/feed.xml"
+                class="rss-button"
+                target="_blank"
+                rel="noopener"
+                title="Subscribe to RSS feed"
+            >
+                📡 RSS
+            </a>
 
             <button
                 id="bookmarks-toggle"
@@ -187,7 +197,7 @@
 
     <div id="no-results" class="no-results">
         <p>🔍 No articles found matching your criteria.</p>
-        <p>Try adjusting your product/domain filters or search terms.</p>
+        <p>Try adjusting your product or domain filters, or broadening your search.</p>
     </div>
 
     <div
@@ -220,7 +230,7 @@
     </p>
 
     <p>
-        Community aggregation of publicly available Microsoft security content.
+        Community aggregation of publicly available Microsoft security, AI security, and threat intelligence content.
         Not affiliated with Microsoft.
     </p>
 </footer>
