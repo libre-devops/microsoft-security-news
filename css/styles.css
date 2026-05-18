@@ -280,6 +280,51 @@ main {
   border-radius: 12px;
 }
 
+/* ===== Loading State ===== */
+.loading {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.loading.visible {
+  display: flex;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--brand-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== No Results State ===== */
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.no-results.visible {
+  display: block;
+}
+
 /* ===== Grid ===== */
 .articles-grid {
   display: grid;
@@ -356,51 +401,6 @@ main {
   color: var(--text-secondary);
   font-size: 0.92rem;
   line-height: 1.55;
-}
-
-/* ===== Loading State ===== */
-.loading {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 4rem 2rem;
-  color: var(--text-secondary);
-  font-size: 1rem;
-}
-
-.loading.visible {
-  display: flex;
-}
-
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--border-color);
-  border-top-color: var(--brand-accent);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ===== No Results State ===== */
-.no-results {
-  display: none;
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.no-results.visible {
-  display: block;
 }
 
 /* ===== Toast ===== */
@@ -577,15 +577,27 @@ footer a:hover {
   --shadow-lg: 0 12px 32px rgba(31, 35, 40, 0.2);
 }
 
-[data-theme="light"] .search-box input {
-  background: rgba(255, 255, 255, 0.22);
-}
-
+/*
+ * In light mode, inactive pills need an explicit background/color
+ * because --bg-primary is now near-white.
+ * NOTE: this rule has the same specificity as .pill.active, and because
+ * it comes later in the file it would normally win — so we MUST also
+ * re-declare .pill.active underneath it to keep dark-bg + white text.
+ */
 [data-theme="light"] .pill {
   background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+/* Must come AFTER the rule above to win the specificity tie */
+[data-theme="light"] .pill.active {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
 }
 
 [data-theme="light"] #date-filter,
 [data-theme="light"] #sort-by {
   background: var(--bg-secondary);
+  color: var(--text-primary);
 }

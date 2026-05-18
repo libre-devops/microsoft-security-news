@@ -2,14 +2,13 @@ name: Update Microsoft Security News Feed
 
 on:
   schedule:
-    # Every 6 hours (UTC)
+    # Every 6 hours UTC
     - cron: "0 */6 * * *"
 
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
 
 concurrency:
   group: microsoft-security-news-feed
@@ -21,12 +20,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: "pip"
