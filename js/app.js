@@ -317,7 +317,7 @@
   // ============================
   function loadTheme() {
     const saved =
-      localStorage.getItem("mssecnews-theme") || "light";
+      localStorage.getItem("mssecnews-theme") || "dark";
 
     document.documentElement.setAttribute("data-theme", saved);
 

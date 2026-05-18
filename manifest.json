@@ -4,8 +4,8 @@
   "description": "Daily Microsoft security news, advisories, and threat intelligence",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0078D4",
-  "theme_color": "#0078D4",
+  "background_color": "#121212",
+  "theme_color": "#2B0A3D",
   "orientation": "any",
   "icons": [
     {
