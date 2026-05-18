@@ -2,7 +2,7 @@
 
 A daily-updated Azure blog aggregator hosted on GitHub Pages. Collects articles from Azure blogs and presents them in a clean, searchable interface — last 30 days only.
 
-**Live site:** [azurefeed.news](https://azurefeed.news)
+**Live site:** [azurefeed.news](https://security.libredevops.org)
 
 ## Features
 
@@ -55,7 +55,7 @@ Go to **Actions → Fetch Azure Blog Feeds → Run workflow** to populate the in
 
 ### 5. Visit your site
 
-Your feed will be live at `https://azurefeed.news`
+Your feed will be live at `https://security.libredevops.org`
 
 ## Local Development
 

@@ -1,419 +1,240 @@
 #!/usr/bin/env python3
 """
-Azure News Feed - RSS Feed Fetcher
-Fetches articles from Azure blog RSS feeds and generates a JSON data file.
+Microsoft Security News Feed Fetcher
+
+MVP:
+- Fetch Microsoft Security Blog RSS feed
+- Clean/normalise entries
+- Deduplicate
+- Generate JSON for frontend
+- Generate aggregated RSS feed
 """
 
-import feedparser
 import json
 import os
 import re
-import time
 from datetime import datetime, timedelta, timezone
 from html import unescape
+from xml.etree.ElementTree import Element, SubElement, tostring
 
-# Blog definitions: board_id -> display name
-BLOGS = {
-    "analyticsonazure": "Analytics on Azure",
-    "appsonazureblog": "Apps on Azure",
-    "azurearcblog": "Azure Arc",
-    "azurearchitectureblog": "Azure Architecture",
-    "azurecommunicationservicesblog": "Communication Services",
-    "azurecompute": "Azure Compute",
-    "azureconfidentialcomputingblog": "Confidential Computing",
-    "azure-databricks": "Azure Databricks",
-    "azure-events": "Azure Events",
-    "azuregovernanceandmanagementblog": "Governance & Management",
-    "azure-customer-innovation-blog": "Customer Innovation",
-    "azurehighperformancecomputingblog": "High Performance Computing",
-    "azureinfrastructureblog": "Azure Infrastructure",
-    "integrationsonazureblog": "Integrations on Azure",
-    "azuremapsblog": "Azure Maps",
-    "azuremigrationblog": "Azure Migration",
-    "azurenetworkingblog": "Azure Networking",
-    "azurenetworksecurityblog": "Azure Network Security",
-    "azureobservabilityblog": "Azure Observability",
-    "azurepaasblog": "Azure PaaS",
-    "azurestackblog": "Azure Stack",
-    "azurestorageblog": "Azure Storage",
-    "finopsblog": "FinOps",
-    "azuretoolsblog": "Azure Tools",
-    "azurevirtualdesktopblog": "Azure Virtual Desktop",
-    "linuxandopensourceblog": "Linux & Open Source",
-    "messagingonazureblog": "Messaging on Azure",
-    "telecommunications-industry-blog": "Telecommunications",
-    "azuredevcommunityblog": "Azure Dev Community",
-    "oracleonazureblog": "Oracle on Azure",
-    "microsoft-planetary-computer-blog": "Planetary Computer",
-    "microsoftsentinelblog": "Microsoft Sentinel",
-    "microsoftdefendercloudblog": "Microsoft Defender for Cloud",
-    "azureadvancedthreatprotection": "Azure Advanced Threat Protection",
-    "azure-ai-foundry-blog": "Azure AI Foundry",
-    "itopstalkblog": "ITOpsTalk",
-    "coreinfrastructureandsecurityblog": "Core Infrastructure & Security",
-}
+import feedparser
 
-TC_RSS_URL = (
-    "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id={board}"
-)
-AKS_BLOG_FEED = "https://blog.aks.azure.com/rss.xml"
+SITE_NAME = "Microsoft Security News"
+SITE_URL = "https://security.libredevops.org"
+SITE_DESCRIPTION = "Aggregated Microsoft security news and advisories"
 
-# DevBlogs definitions: slug -> (display name, feed URL)
-DEVBLOGS = {
-    "allthingsazure": ("All Things Azure", "https://devblogs.microsoft.com/all-things-azure/feed/"),
-    "msdevblog": ("Microsoft Developers Blog", "https://developer.microsoft.com/blog/feed/"),
-    "visualstudio": ("Visual Studio Blog", "https://devblogs.microsoft.com/visualstudio/feed/"),
-    "vscodeblog": ("VS Code Blog", "https://devblogs.microsoft.com/vscode-blog/feed/"),
-    "developfromthecloud": ("Develop from the Cloud", "https://devblogs.microsoft.com/develop-from-the-cloud/feed/"),
-    "azuredevops": ("Azure DevOps Blog", "https://devblogs.microsoft.com/devops/feed/"),
-    "iseblog": ("ISE Developer Blog", "https://devblogs.microsoft.com/ise/feed/"),
-    "azuresdkblog": ("Azure SDK Blog", "https://devblogs.microsoft.com/azure-sdk/feed/"),
-    "commandline": ("Windows Command Line", "https://devblogs.microsoft.com/commandline/feed/"),
-    "aspireblog": ("Aspire Blog", "https://devblogs.microsoft.com/aspire/feed/"),
-    "foundryblog": ("Microsoft Foundry Blog", "https://devblogs.microsoft.com/foundry/feed/"),
-    "cosmosdbblog": ("Azure Cosmos DB Blog", "https://devblogs.microsoft.com/cosmosdb/feed/"),
-    "azuresqlblog": ("Azure SQL Dev Corner", "https://devblogs.microsoft.com/azure-sql/feed/"),
-}
+MAX_ARTICLE_AGE_DAYS = 30
+MAX_RSS_ITEMS = 50
 
-# Community blogs definitions: slug -> (display name, feed URL)
-COMMUNITY_BLOGS = {
-    "gbblog": ("Azure Global Black Belt Blog", "https://azureglobalblackbelts.com/rss.xml"),
-    "azurecitadelblog": ("Azure Citadel Blog", "https://www.azurecitadel.com/blog/index.xml"),
-    "devtoazure": ("Dev.to Azure", "https://dev.to/feed/azure"),
+SOURCES = {
+    "mssecurity": {
+        "name": "Microsoft Security Blog",
+        "url": "https://www.microsoft.com/security/blog/feed/",
+        "vendor": "Microsoft",
+        "category": "Security",
+        "default_author": "Microsoft",
+    }
 }
 
 
-def clean_html(text):
-    """Remove HTML tags and clean up text."""
+def clean_html(text: str) -> str:
+    """Strip HTML tags and normalise whitespace."""
     if not text:
         return ""
-    clean = re.sub(r"<[^>]+>", "", text)
-    clean = unescape(clean)
-    clean = re.sub(r"\s+", " ", clean).strip()
-    return clean
+
+    text = re.sub(r"<[^>]+>", "", text)
+    text = unescape(text)
+    text = re.sub(r"\s+", " ", text)
+
+    return text.strip()
 
 
-def truncate(text, max_length=300):
-    """Truncate text to max_length, ending at a word boundary."""
+def truncate(text: str, max_length: int = 300) -> str:
+    """Truncate without cutting words."""
     if len(text) <= max_length:
         return text
-    truncated = text[:max_length].rsplit(" ", 1)[0]
-    return truncated + "..."
+
+    return text[:max_length].rsplit(" ", 1)[0] + "..."
 
 
-def parse_date(entry):
-    """Parse date from feed entry, return ISO format string."""
-    for field in ["published_parsed", "updated_parsed"]:
+def parse_date(entry) -> str:
+    """Convert feed dates into ISO8601 UTC strings."""
+    for field in ("published_parsed", "updated_parsed"):
         parsed = entry.get(field)
         if parsed:
             try:
                 dt = datetime(*parsed[:6], tzinfo=timezone.utc)
                 return dt.isoformat()
             except (ValueError, TypeError):
-                continue
+                pass
 
-    for field in ["published", "updated"]:
-        date_str = entry.get(field, "")
-        if date_str:
-            return date_str
+    for field in ("published", "updated"):
+        value = entry.get(field)
+        if value:
+            try:
+                parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+                return parsed.astimezone(timezone.utc).isoformat()
+            except ValueError:
+                return value
 
     return datetime.now(timezone.utc).isoformat()
 
 
-def fetch_tech_community_feeds():
-    """Fetch articles from Tech Community blogs."""
-    articles = []
-
-    for board_id, blog_name in BLOGS.items():
-        url = TC_RSS_URL.format(board=board_id)
-        print(f"Fetching: {blog_name} ({board_id})...")
-
-        try:
-            feed = feedparser.parse(url)
-
-            if feed.bozo and not feed.entries:
-                print(f"  Warning: Could not parse feed for {blog_name}")
-                continue
-
-            count = 0
-            for entry in feed.entries:
-                summary = clean_html(entry.get("summary", ""))
-                articles.append(
-                    {
-                        "title": clean_html(entry.get("title", "Untitled")),
-                        "link": entry.get("link", ""),
-                        "published": parse_date(entry),
-                        "summary": truncate(summary),
-                        "blog": blog_name,
-                        "blogId": board_id,
-                        "author": entry.get("author", "Microsoft"),
-                    }
-                )
-                count += 1
-
-            print(f"  Found {count} articles")
-
-        except Exception as e:
-            print(f"  Error fetching {blog_name}: {e}")
-
-        time.sleep(0.5)
-
-    return articles
-
-
-def fetch_aks_blog():
-    """Fetch articles from the AKS blog."""
-    articles = []
-    print("Fetching: AKS Blog...")
+def fetch_feed(source_id: str, source: dict) -> list[dict]:
+    """Fetch and normalise a single RSS/Atom feed."""
+    print(f"Fetching {source['name']}...")
 
     try:
-        feed = feedparser.parse(AKS_BLOG_FEED)
+        feed = feedparser.parse(source["url"])
 
         if feed.bozo and not feed.entries:
-            print("  Warning: Could not parse AKS blog feed")
-            return articles
+            print(f"Failed to parse {source['name']}")
+            return []
 
-        count = 0
+        articles = []
+
         for entry in feed.entries:
             summary = clean_html(entry.get("summary", ""))
-            articles.append(
-                {
-                    "title": clean_html(entry.get("title", "Untitled")),
-                    "link": entry.get("link", ""),
-                    "published": parse_date(entry),
-                    "summary": truncate(summary),
-                    "blog": "AKS Blog",
-                    "blogId": "aksblog",
-                    "author": entry.get("author", "Microsoft"),
-                }
+
+            article = {
+                "title": clean_html(entry.get("title", "Untitled")),
+                "link": entry.get("link", ""),
+                "published": parse_date(entry),
+                "summary": truncate(summary),
+                "source": source["name"],
+                "source_id": source_id,
+                "vendor": source["vendor"],
+                "category": source["category"],
+                "author": entry.get("author", source["default_author"]),
+            }
+
+            articles.append(article)
+
+        print(f"Found {len(articles)} articles")
+        return articles
+
+    except Exception as ex:
+        print(f"Error fetching {source['name']}: {ex}")
+        return []
+
+
+def deduplicate_articles(articles: list[dict]) -> list[dict]:
+    """Remove duplicate links and old articles."""
+    cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_ARTICLE_AGE_DAYS)
+
+    seen_links = set()
+    unique = []
+
+    for article in articles:
+        link = article.get("link")
+        published = article.get("published", "")
+
+        if not link or link in seen_links:
+            continue
+
+        try:
+            published_dt = datetime.fromisoformat(
+                published.replace("Z", "+00:00")
             )
-            count += 1
+        except ValueError:
+            continue
 
-        print(f"  Found {count} articles")
+        if published_dt < cutoff:
+            continue
 
-    except Exception as e:
-        print(f"  Error fetching AKS blog: {e}")
+        seen_links.add(link)
+        unique.append(article)
 
-    return articles
-
-
-def fetch_devblogs_feeds():
-    """Fetch articles from Microsoft DevBlogs."""
-    articles = []
-
-    for blog_id, (blog_name, feed_url) in DEVBLOGS.items():
-        print(f"Fetching: {blog_name}...")
-
-        try:
-            feed = feedparser.parse(feed_url)
-
-            if feed.bozo and not feed.entries:
-                print(f"  Warning: Could not parse {blog_name} feed")
-                continue
-
-            count = 0
-            for entry in feed.entries:
-                summary = clean_html(entry.get("summary", ""))
-                articles.append(
-                    {
-                        "title": clean_html(entry.get("title", "Untitled")),
-                        "link": entry.get("link", ""),
-                        "published": parse_date(entry),
-                        "summary": truncate(summary),
-                        "blog": blog_name,
-                        "blogId": blog_id,
-                        "author": entry.get("author", "Microsoft"),
-                    }
-                )
-                count += 1
-
-            print(f"  Found {count} articles")
-
-        except Exception as e:
-            print(f"  Error fetching {blog_name}: {e}")
-
-        time.sleep(0.5)
-
-    return articles
+    return unique
 
 
-def fetch_community_blogs():
-    """Fetch articles from community blogs."""
-    articles = []
+def generate_json_feed(articles: list[dict]) -> None:
+    """Write frontend JSON feed."""
+    os.makedirs("data", exist_ok=True)
 
-    for blog_id, (blog_name, feed_url) in COMMUNITY_BLOGS.items():
-        print(f"Fetching: {blog_name}...")
+    payload = {
+        "site": SITE_NAME,
+        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        "totalArticles": len(articles),
+        "articles": articles,
+    }
 
-        try:
-            feed = feedparser.parse(feed_url)
+    output = os.path.join("data", "feeds.json")
 
-            if feed.bozo and not feed.entries:
-                print(f"  Warning: Could not parse {blog_name} feed")
-                continue
+    with open(output, "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
 
-            count = 0
-            for entry in feed.entries:
-                summary = clean_html(entry.get("summary", ""))
-                articles.append(
-                    {
-                        "title": clean_html(entry.get("title", "Untitled")),
-                        "link": entry.get("link", ""),
-                        "published": parse_date(entry),
-                        "summary": truncate(summary),
-                        "blog": blog_name,
-                        "blogId": blog_id,
-                        "author": entry.get("author", "Microsoft"),
-                    }
-                )
-                count += 1
-
-            print(f"  Found {count} articles")
-
-        except Exception as e:
-            print(f"  Error fetching {blog_name}: {e}")
-
-        time.sleep(0.5)
-
-    return articles
+    print(f"JSON feed written to {output}")
 
 
-def generate_rss_feed(articles):
-    """Generate an RSS feed XML file from the aggregated articles."""
-    from xml.etree.ElementTree import Element, SubElement, tostring
-
+def generate_rss_feed(articles: list[dict]) -> None:
+    """Generate RSS feed from aggregated articles."""
     rss = Element("rss", version="2.0")
     rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
+
     channel = SubElement(rss, "channel")
-    SubElement(channel, "title").text = "Azure News Feed"
-    SubElement(channel, "link").text = "https://azurefeed.news"
-    SubElement(channel, "description").text = (
-        "Aggregated daily news from Azure blogs"
-    )
+
+    SubElement(channel, "title").text = SITE_NAME
+    SubElement(channel, "link").text = SITE_URL
+    SubElement(channel, "description").text = SITE_DESCRIPTION
+    SubElement(channel, "generator").text = "Microsoft Security News Feed"
+    SubElement(channel, "language").text = "en"
+
     SubElement(channel, "lastBuildDate").text = datetime.now(
         timezone.utc
     ).strftime("%a, %d %b %Y %H:%M:%S GMT")
-    SubElement(channel, "generator").text = "Azure News Feed"
-    SubElement(channel, "language").text = "en"
 
-    for article in articles[:50]:
+    for article in articles[:MAX_RSS_ITEMS]:
         item = SubElement(channel, "item")
+
         SubElement(item, "title").text = article["title"]
         SubElement(item, "link").text = article["link"]
         SubElement(item, "guid").text = article["link"]
         SubElement(item, "description").text = article["summary"]
         SubElement(item, "dc:creator").text = article["author"]
+        SubElement(item, "category").text = article["category"]
+
         try:
-            dt = datetime.fromisoformat(article["published"])
+            dt = datetime.fromisoformat(
+                article["published"].replace("Z", "+00:00")
+            )
             SubElement(item, "pubDate").text = dt.strftime(
                 "%a, %d %b %Y %H:%M:%S GMT"
             )
-        except (ValueError, TypeError):
+        except ValueError:
             pass
-        SubElement(item, "category").text = article["blog"]
 
-    xml_str = '<?xml version="1.0" encoding="UTF-8"?>\n' + tostring(
-        rss, encoding="unicode"
-    )
-    output_path = os.path.join("data", "feed.xml")
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(xml_str)
-    print(f"RSS feed saved to {output_path}")
+    xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    xml += tostring(rss, encoding="unicode")
 
+    output = os.path.join("data", "feed.xml")
 
-def generate_ai_summary(articles):
-    """Generate an AI summary of today's articles using OpenAI (optional)."""
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    if not api_key:
-        print("No OPENAI_API_KEY set, skipping AI summary")
-        return None
+    with open(output, "w", encoding="utf-8") as f:
+        f.write(xml)
 
-    try:
-        import openai
-
-        today = datetime.now(timezone.utc).date().isoformat()
-        today_articles = [
-            a for a in articles if a.get("published", "").startswith(today)
-        ]
-
-        if not today_articles:
-            print("No articles published today, skipping AI summary")
-            return None
-
-        titles = "\n".join(
-            ["- " + a["title"] + " (" + a["blog"] + ")" for a in today_articles[:20]]
-        )
-        prompt = (
-            "You are a concise tech news editor. Summarize today's Azure blog posts "
-            "in 2-3 sentences highlighting the most important themes and announcements. "
-            "Be specific about technologies mentioned. Here are the articles:\n\n"
-            + titles
-        )
-
-        client = openai.OpenAI(api_key=api_key)
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=200,
-        )
-        summary = response.choices[0].message.content.strip()
-        print(f"AI summary generated: {summary[:100]}...")
-        return summary
-
-    except Exception as e:
-        print(f"AI summary failed: {e}")
-        return None
+    print(f"RSS feed written to {output}")
 
 
 def main():
     print("=" * 60)
-    print("Azure News Feed - Fetching RSS Feeds")
+    print(SITE_NAME)
     print("=" * 60)
 
-    all_articles = []
-    all_articles.extend(fetch_tech_community_feeds())
-    all_articles.extend(fetch_aks_blog())
-    all_articles.extend(fetch_devblogs_feeds())
-    all_articles.extend(fetch_community_blogs())
+    articles = []
 
-    # Sort by date, newest first
-    all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
+    for source_id, source in SOURCES.items():
+        articles.extend(fetch_feed(source_id, source))
 
-    # Remove duplicates by link and discard articles older than 30 days
-    cutoff = (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()
-    seen_links = set()
-    unique_articles = []
-    for article in all_articles:
-        if article["link"] and article["link"] not in seen_links:
-            if article.get("published", "") >= cutoff:
-                seen_links.add(article["link"])
-                unique_articles.append(article)
+    articles.sort(key=lambda x: x["published"], reverse=True)
 
-    discarded = len(all_articles) - len(unique_articles)
-    if discarded:
-        print(f"Filtered out {discarded} duplicate/older-than-30-days articles")
+    unique_articles = deduplicate_articles(articles)
 
-    # Generate AI summary (optional)
-    summary = generate_ai_summary(unique_articles)
-
-    data = {
-        "lastUpdated": datetime.now(timezone.utc).isoformat(),
-        "totalArticles": len(unique_articles),
-        "articles": unique_articles,
-    }
-    if summary:
-        data["summary"] = summary
-
-    os.makedirs("data", exist_ok=True)
-    output_path = os.path.join("data", "feeds.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
-    # Generate RSS feed
+    generate_json_feed(unique_articles)
     generate_rss_feed(unique_articles)
 
-    print(f"\n{'=' * 60}")
-    print(f"Done! {len(unique_articles)} unique articles saved to {output_path}")
-    print(f"{'=' * 60}")
+    print("=" * 60)
+    print(f"Done. {len(unique_articles)} articles generated.")
+    print("=" * 60)
 
 
 if __name__ == "__main__":
