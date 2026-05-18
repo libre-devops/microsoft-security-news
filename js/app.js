@@ -149,11 +149,18 @@
 
       articles = data.articles || [];
 
+      // Must call showLoading(false) before applyFilters() so that
+      // isLoading is false when renderArticles() runs, otherwise the
+      // isLoading guard causes it to return early and cards never render.
+      showLoading(false);
+
       updateHeaderStats(data);
       renderProductFilters();
       renderDomainFilters();
       applyFilters();
     } catch (err) {
+      showLoading(false);
+
       console.error(err);
 
       articlesGrid.innerHTML = `
@@ -162,8 +169,6 @@
           <p>Run the feed workflow and refresh.</p>
         </div>
       `;
-    } finally {
-      showLoading(false);
     }
   }
 
