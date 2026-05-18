@@ -1,7 +1,52 @@
 {
-  "lastUpdated": "2026-05-17T13:17:37.398068+00:00",
+  "lastUpdated": "2026-05-18T15:29:25.154181+00:00",
   "totalArticles": 253,
   "articles": [
+    {
+      "title": "Building a Controllable Inference Platform on Kubernetes with AI Runway",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-controllable-inference-platform-on-kubernetes-with-ai/ba-p/4520590",
+      "published": "2026-05-18T11:46:14+00:00",
+      "summary": "When enterprises move generative AI from demos to real business workloads, the hardest question is usually not whether a model can answer a prompt. The harder question is whether the whole system can run reliably, predictably, securely, and economically over time. This becomes especially important...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "kinfey"
+    },
+    {
+      "title": "Getting Started with OpenSearch on AKS with AKS AVM and Helm",
+      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/getting-started-with-opensearch-on-aks-with-aks-avm-and-helm/ba-p/4520392",
+      "published": "2026-05-18T08:28:56+00:00",
+      "summary": "Co-authored by Chetan Vaja (Senior Cloud Solution Architect @ Microsoft), Ninad Kapse (Senior Cloud Solution Architect @ Microsoft), Vikas Gautam (Senior Cloud Solution Architect @ Microsoft), and Prafulla Wani (Principal Cloud Solution Architect @ Microsoft). Summary OpenSearch is a...",
+      "blog": "Apps on Azure",
+      "blogId": "appsonazureblog",
+      "author": "prafullawani"
+    },
+    {
+      "title": "Understanding and building an Azure Hybrid Meshed Hub-Spoke Topology",
+      "link": "https://techcommunity.microsoft.com/t5/azure-networking-blog/understanding-and-building-an-azure-hybrid-meshed-hub-spoke/ba-p/4516879",
+      "published": "2026-05-18T07:15:26+00:00",
+      "summary": "A meshed hybrid hub-spoke topology Azure offers two main approaches to build network architectures. This article focuses on traditional networking (using VNets, peering, route tables, etc.), rather than Azure Virtual WAN. Why a hub-spoke topology? A hub‑spoke topology is the only way to control...",
+      "blog": "Azure Networking",
+      "blogId": "azurenetworkingblog",
+      "author": "Svenbaeck"
+    },
+    {
+      "title": "Integrating Azure DevOps with VS Code Agent using MCP (Model Context Protocol)",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/integrating-azure-devops-with-vs-code-agent-using-mcp-model/ba-p/4516250",
+      "published": "2026-05-18T07:00:00+00:00",
+      "summary": "🧠 What is MCP (Model Context Protocol)? MCP is a standard interface that allows AI agents to securely interact with external systems such as Azure DevOps/ With MCP: Azure DevOps capabilities are exposed as tools GitHub Copilot can discover, reason, and execute actions All actions happen with user...",
+      "blog": "Azure Dev Community",
+      "blogId": "azuredevcommunityblog",
+      "author": "bhramesh"
+    },
+    {
+      "title": "Build a Local Microsoft Sentinel Triage Agent in VS Code (Copilot + MCP)",
+      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/build-a-local-microsoft-sentinel-triage-agent-in-vs-code-copilot/ba-p/4520486",
+      "published": "2026-05-18T04:28:02+00:00",
+      "summary": "Modern SOC work is not limited by data—it’s limited by the friction of collecting it. This post shows a local-first workflow that lets you investigate Microsoft Sentinel incidents from inside VS Code using GitHub Copilot Chat for reasoning and a small, deterministic MCP toolset for evidence...",
+      "blog": "Core Infrastructure & Security",
+      "blogId": "coreinfrastructureandsecurityblog",
+      "author": "absharan"
+    },
     {
       "title": "What's new in FinOps toolkit 14 – April 2026",
       "link": "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-14-april-2026/ba-p/4519497",
@@ -1623,15 +1668,6 @@
       "author": "Niels Laute"
     },
     {
-      "title": "The Future of Agentic AI: Inside Microsoft Agent Framework 1.0",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-future-of-agentic-ai-inside-microsoft-agent-framework-1-0/ba-p/4510698",
-      "published": "2026-04-28T07:00:00+00:00",
-      "summary": "Agentic AI is rapidly moving beyond demos and chatbots toward long‑running, autonomous systems that reason, call tools, collaborate with other agents, and operate reliably in production. On April 3, 2026, Microsoft marked a major milestone with the General Availability (GA) release of Microsoft...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "rajesh-yadav"
-    },
-    {
       "title": "Why Does Azure App Service Return HTTP 404?",
       "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/why-does-azure-app-service-return-http-404/ba-p/4514004",
       "published": "2026-04-28T06:39:38+00:00",
@@ -1693,15 +1729,6 @@
       "blog": "Linux & Open Source",
       "blogId": "linuxandopensourceblog",
       "author": "robcronin"
-    },
-    {
-      "title": "Rethinking Data Modeling: How GitHub Copilot Is Changing the Way We Design Systems",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-data-modeling-how-github-copilot-is-changing-the-way/ba-p/4509941",
-      "published": "2026-04-27T07:00:00+00:00",
-      "summary": "There is a point in every engineer’s journey where data modeling stops feeling intuitive. What starts as a clean schema becomes harder to reason about. Relationships blur. Query paths multiply. Small changes ripple across different steps. This is where data modeling reveals its real challenge: not...",
-      "blog": "Azure Dev Community",
-      "blogId": "azuredevcommunityblog",
-      "author": "B_Manasa"
     },
     {
       "title": "How to Troubleshoot Azure Functions Service Bus Trigger Issues",
@@ -1873,15 +1900,6 @@
       "blog": "Microsoft Developers Blog",
       "blogId": "msdevblog",
       "author": "Yohan Lasorsa"
-    },
-    {
-      "title": "Microsoft 365 multi-agent workflow with Microsoft Agent Framework",
-      "link": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-365-multi-agent-workflow-with-microsoft-agent/ba-p/4514164",
-      "published": "2026-04-23T16:16:15+00:00",
-      "summary": "Most production AI tasks are too complex for a single agent. You need specialists that collaborate, a destination expert that researches the best places to visit, a budget analyst that breaks down costs, an activities curator that finds the best experiences, all coordinated by an orchestration...",
-      "blog": "Apps on Azure",
-      "blogId": "appsonazureblog",
-      "author": "Vincent_Giraud"
     },
     {
       "title": "Automate Prior Authorization with AI Agents - Now Available as a Foundry Template",
@@ -2260,24 +2278,6 @@
       "blog": "Core Infrastructure & Security",
       "blogId": "coreinfrastructureandsecurityblog",
       "author": "Elanor92"
-    },
-    {
-      "title": "Microsoft Fabric Operations Agent Step by Step Walkthrough",
-      "link": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/microsoft-fabric-operations-agent-step-by-step-walkthrough/ba-p/4512572",
-      "published": "2026-04-18T07:00:41+00:00",
-      "summary": "Fabric Capacity and Workspace You need a Microsoft Fabric workspace backed by a paid capacity. Trial capacities are not supported for Operations Agent. Your capacity must be provisioned in a supported region. As of April 2026, Operations Agent is available in all Microsoft Fabric regions except...",
-      "blog": "Analytics on Azure",
-      "blogId": "analyticsonazure",
-      "author": "NaufalPrawironegoro"
-    },
-    {
-      "title": "Bringing AI to the Factory Floor with Foundry Local - Now in Public Preview on Azure Local",
-      "link": "https://techcommunity.microsoft.com/t5/azure-arc-blog/bringing-ai-to-the-factory-floor-with-foundry-local-now-in/ba-p/4509951",
-      "published": "2026-04-17T15:23:10+00:00",
-      "summary": "Key capabilities in this preview Foundry Local exposes standard REST and OpenAI‑compatible APIs, enabling IT and AI teams to deploy and operate local AI workloads using familiar, cloud‑aligned patterns across edge and on‑prem environments. In this public preview, we deliver the following...",
-      "blog": "Azure Arc",
-      "blogId": "azurearcblog",
-      "author": "liranlyabock_microsoft"
     }
   ]
 }
