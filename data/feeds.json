@@ -1,136 +1,8 @@
 {
   "site": "Microsoft Security News",
-  "lastUpdated": "2026-05-19T07:51:29.986489+00:00",
+  "lastUpdated": "2026-05-19T09:54:22.581825+00:00",
   "totalArticles": 71,
   "articles": [
-    {
-      "title": "CVE-2026-7246 Pallets Click contains a command injection via Unsanitized Filename \"click.edit()\"",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-7246",
-      "published": "2026-05-19T08:49:36+00:00",
-      "summary": "Information published.",
-      "author": "Microsoft",
-      "source": "Microsoft Security Response Center",
-      "source_id": "msrc",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "msrc",
-          "name": "Microsoft Security Response Center",
-          "score": 7
-        }
-      ],
-      "domains": [
-        {
-          "id": "vulnerability-management",
-          "name": "Vulnerability Management",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Security Response Center",
-        "Vulnerability Management"
-      ]
-    },
-    {
-      "title": "CVE-2026-41082 In OCaml opam before 2.5.1, a .install field containing a destination filepath can use ../ to reach a parent directory.",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41082",
-      "published": "2026-05-19T08:48:22+00:00",
-      "summary": "Information published.",
-      "author": "Microsoft",
-      "source": "Microsoft Security Response Center",
-      "source_id": "msrc",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "msrc",
-          "name": "Microsoft Security Response Center",
-          "score": 7
-        }
-      ],
-      "domains": [
-        {
-          "id": "vulnerability-management",
-          "name": "Vulnerability Management",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Security Response Center",
-        "Vulnerability Management"
-      ]
-    },
-    {
-      "title": "CVE-2026-25833 Mbed TLS 3.5.0 to 3.6.5 fixed in 3.6.6 and 4.1.0 has a buffer overflow in the x509_inet_pton_ipv6() function",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25833",
-      "published": "2026-05-19T08:48:17+00:00",
-      "summary": "Information published.",
-      "author": "Microsoft",
-      "source": "Microsoft Security Response Center",
-      "source_id": "msrc",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "msrc",
-          "name": "Microsoft Security Response Center",
-          "score": 7
-        }
-      ],
-      "domains": [
-        {
-          "id": "vulnerability-management",
-          "name": "Vulnerability Management",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Security Response Center",
-        "Vulnerability Management"
-      ]
-    },
-    {
-      "title": "CVE-2026-25834 Mbed TLS v3.3.0 up to 3.6.5 and 4.0.0 allows Algorithm Downgrade.",
-      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-25834",
-      "published": "2026-05-19T08:48:11+00:00",
-      "summary": "Information published.",
-      "author": "Microsoft",
-      "source": "Microsoft Security Response Center",
-      "source_id": "msrc",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "msrc",
-          "name": "Microsoft Security Response Center",
-          "score": 7
-        }
-      ],
-      "domains": [
-        {
-          "id": "vulnerability-management",
-          "name": "Vulnerability Management",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Security Response Center",
-        "Vulnerability Management"
-      ]
-    },
     {
       "title": "CVE-2026-34872 An issue was discovered in Mbed TLS 3.5.x and 3.6.x through 3.6.5 and TF-PSA-Crypto 1.0. There is a lack of contributory behavior in FFDH due to improper input validation. Using finite-field Diffie-Hellman, the other party can force the shared secret into a small set of values (lack of contributory behavior). This is a problem for protocols that depend on contributory behavior (which is not the case for TLS). The attack can be carried by the peer, or depending on the protocol by an active network attacker (person in the middle).",
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-34872",
@@ -452,6 +324,38 @@
       ]
     },
     {
+      "title": "CVE-2025-8224 GNU Binutils BFD Library elf.c bfd_elf_get_str_section null pointer dereference",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-8224",
+      "published": "2026-05-19T08:42:54+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "msrc",
+          "name": "Microsoft Security Response Center",
+          "score": 7
+        }
+      ],
+      "domains": [
+        {
+          "id": "vulnerability-management",
+          "name": "Vulnerability Management",
+          "score": 4
+        }
+      ],
+      "tags": [
+        "Microsoft Security Response Center",
+        "Vulnerability Management"
+      ]
+    },
+    {
       "title": "CVE-2026-3087 shutil.unpack_archive() doesn't check for Windows absolute paths in ZIPs",
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-3087",
       "published": "2026-05-19T08:40:53+00:00",
@@ -615,6 +519,102 @@
       "title": "CVE-2026-41080 libexpat before 2.8.0 uses insufficient entropy, and thus hash flooding can occur via a crafted XML document.",
       "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41080",
       "published": "2026-05-19T08:39:01+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "msrc",
+          "name": "Microsoft Security Response Center",
+          "score": 7
+        }
+      ],
+      "domains": [
+        {
+          "id": "vulnerability-management",
+          "name": "Vulnerability Management",
+          "score": 4
+        }
+      ],
+      "tags": [
+        "Microsoft Security Response Center",
+        "Vulnerability Management"
+      ]
+    },
+    {
+      "title": "CVE-2025-1176 GNU Binutils ld elflink.c _bfd_elf_gc_mark_rsec heap-based overflow",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1176",
+      "published": "2026-05-19T08:01:58+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "msrc",
+          "name": "Microsoft Security Response Center",
+          "score": 7
+        }
+      ],
+      "domains": [
+        {
+          "id": "vulnerability-management",
+          "name": "Vulnerability Management",
+          "score": 4
+        }
+      ],
+      "tags": [
+        "Microsoft Security Response Center",
+        "Vulnerability Management"
+      ]
+    },
+    {
+      "title": "CVE-2025-1178 GNU Binutils ld libbfd.c bfd_putl64 memory corruption",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1178",
+      "published": "2026-05-19T08:01:52+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "msrc",
+          "name": "Microsoft Security Response Center",
+          "score": 7
+        }
+      ],
+      "domains": [
+        {
+          "id": "vulnerability-management",
+          "name": "Vulnerability Management",
+          "score": 4
+        }
+      ],
+      "tags": [
+        "Microsoft Security Response Center",
+        "Vulnerability Management"
+      ]
+    },
+    {
+      "title": "CVE-2025-0665 eventfd double close",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-0665",
+      "published": "2026-05-19T08:01:31+00:00",
       "summary": "Information published.",
       "author": "Microsoft",
       "source": "Microsoft Security Response Center",
