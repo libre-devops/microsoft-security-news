@@ -1,8 +1,80 @@
 {
   "site": "Microsoft Security News",
-  "lastUpdated": "2026-05-19T15:34:00.773525+00:00",
+  "lastUpdated": "2026-05-20T19:32:37.072932+00:00",
   "totalArticles": 54,
   "articles": [
+    {
+      "title": "Securing the gaming culture of cultures",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/20/securing-the-gaming-culture-of-cultures/",
+      "published": "2026-05-20T16:00:00+00:00",
+      "summary": "Read about the unique challenges and rewards of securing gaming platforms and how to better protect gaming communities. The post Securing the gaming culture of cultures appeared first on Microsoft Security Blog.",
+      "author": "Aaron Zollman",
+      "source": "Microsoft Security Blog",
+      "source_id": "mssecurity",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Security Blog",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
+    {
+      "title": "Introducing RAMPART and Clarity: Open source tools to bring safety into Agent development workflow",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/",
+      "published": "2026-05-20T15:00:00+00:00",
+      "summary": "The AI systems shipping inside enterprises today are fundamentally different from the ones we were building even two years ago, because they have moved well past answering questions and into accessing your email, retrieving records from your CRM, writing and executing code, and taking actions on...",
+      "author": "Ram Shankar Siva Kumar",
+      "source": "Microsoft Security Blog",
+      "source_id": "mssecurity",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Security Blog",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
+    {
+      "title": "Public preview: Expanded coverage and unified management for SQL VA Express Configuration",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/public-preview-expanded-coverage-and-unified-management-for-sql/ba-p/4514652",
+      "published": "2026-05-19T21:11:13+00:00",
+      "summary": "SQL Vulnerability Assessment (SQL VA) is a core capability in Defender for SQL that helps customers identify possible misconfigurations, excessive permissions, and other deviations from security best practices through continuous scanning of their databases. Traditionally, enabling SQL VA on SQL...",
+      "author": "Catalin Esanu",
+      "source": "Microsoft Defender for Cloud",
+      "source_id": "defender_cloud",
+      "source_group": "TechCommunity",
+      "source_kind": "techcommunity",
+      "vendor": "Microsoft",
+      "source_category": "Cloud Security",
+      "board_id": "microsoftdefendercloudblog",
+      "products": [
+        {
+          "id": "defender-cloud",
+          "name": "Microsoft Defender for Cloud",
+          "score": 9
+        }
+      ],
+      "tags": [
+        "Microsoft Defender for Cloud"
+      ]
+    },
     {
       "title": "Exposing Fox Tempest: A malware-signing service operation",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/05/19/exposing-fox-tempest-a-malware-signing-service-operation/",
@@ -358,47 +430,23 @@
       ]
     },
     {
-      "title": "Defending consumer web properties against modern DDoS attacks",
-      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defending-consumer-web-properties-against-modern-ddos-attacks/",
-      "published": "2026-05-12T16:00:00+00:00",
-      "summary": "Read how to protect consumer websites and defend against modern DDoS attacks with layered security, resilient architecture, and graceful service degradation. The post Defending consumer web properties against modern DDoS attacks appeared first on Microsoft Security Blog.",
-      "author": "Kumar Srinivasamurthy",
-      "source": "Microsoft Security Blog",
-      "source_id": "mssecurity",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Security Blog",
-      "board_id": null,
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
-      ]
-    },
-    {
       "title": "Undermining the trust boundary: Investigating a stealthy intrusion through third-party compromise",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/05/12/undermining-the-trust-boundary-investigating-a-stealthy-intrusion-through-third-party-compromise/",
       "published": "2026-05-12T15:00:00+00:00",
       "summary": "Microsoft Incident Response investigated an attack operated through legitimate and trusted administrative mechanisms to blend seamlessly into routine operations and remain undetected demonstrating that intrusions have increasingly avoided using noisy exploits, obvious malware, or custom tooling,...",
       "author": "Microsoft Incident Response",
-      "source": "Microsoft Security Blog",
-      "source_id": "mssecurity",
+      "source": "Microsoft Threat Intelligence",
+      "source_id": "threat_intel",
       "source_group": "Official Microsoft",
       "source_kind": "rss",
       "vendor": "Microsoft",
-      "source_category": "Security Blog",
+      "source_category": "Threat Intelligence",
       "board_id": null,
       "products": [
         {
           "id": "threat-intelligence",
           "name": "Threat Intelligence",
-          "score": 2
+          "score": 7
         }
       ],
       "tags": [
@@ -1495,54 +1543,6 @@
       ],
       "tags": [
         "General Security"
-      ]
-    },
-    {
-      "title": "Running multimedia AI models on Container Apps with Serverless GPU (A100 & T4)",
-      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/running-multimedia-ai-models-on-container-apps-with-serverless/ba-p/4513063",
-      "published": "2026-04-20T17:14:39+00:00",
-      "summary": "A video format is available for watching. Prerequisites - An Azure account with sufficient permissions to create resources. - Terraform installed on your local machine. Infrastructure Provisioning Clone the Github repository and navigate to the project directory. Initialize Terraform and apply the...",
-      "author": "HoussemDellai",
-      "source": "Core Infrastructure & Security",
-      "source_id": "core_infra_security",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "Security Operations",
-      "board_id": "coreinfrastructureandsecurityblog",
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
-      ]
-    },
-    {
-      "title": "Priority Cleanup V2: Faster, Simpler Data Purging for Exchange Online",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-purview-blog/priority-cleanup-v2-faster-simpler-data-purging-for-exchange/ba-p/4503363",
-      "published": "2026-04-20T16:31:35+00:00",
-      "summary": "Enhancements Achieved with Exchange Priority Cleanup V2 Priority Cleanup (Use priority cleanup to expedite the permanent deletion of sensitive information from mailboxes | Microsoft Learn) was introduced to provide administrators with a powerful tool for permanently deleting mailbox content, even...",
-      "author": "Victor Legat",
-      "source": "Microsoft Purview",
-      "source_id": "purview",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "Data Security",
-      "board_id": "microsoftpurviewblog",
-      "products": [
-        {
-          "id": "purview",
-          "name": "Microsoft Purview",
-          "score": 11
-        }
-      ],
-      "tags": [
-        "Microsoft Purview"
       ]
     }
   ]

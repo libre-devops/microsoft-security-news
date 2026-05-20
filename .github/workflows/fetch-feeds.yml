@@ -36,7 +36,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: "3.14"
           cache: "pip"
           cache-dependency-path: scripts/requirements.txt
 
@@ -46,7 +46,16 @@ jobs:
           pip install -r scripts/requirements.txt
 
       - name: Fetch Microsoft security feeds
-        run: python scripts/fetch_feeds.py
+        run: |
+          python scripts/fetch_feeds.py | tee feed-output.log
+
+      - name: Publish pipeline summary
+        run: |
+          echo "# 🛡️ Microsoft Security Feed Update" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat feed-output.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
 
       - name: Commit updated feed data
         run: |

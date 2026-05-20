@@ -1,98 +1,136 @@
 # 🛡️ Microsoft Security News
 
-A daily-updated Microsoft security news aggregator hosted on GitHub Pages. Collects security-focused articles, advisories, threat intelligence, and product updates from Microsoft security sources in a clean, searchable interface.
+A lightweight Microsoft security intelligence aggregator that collects public Microsoft security content into a single searchable feed.
 
-**Live site:** [security.libredevops.org](https://security.libredevops.org)
+Built for security engineers, defenders, cloud architects, SOC analysts, and anyone who got tired of checking a dozen Microsoft blogs manually.
+
+**Live site:** https://security.libredevops.org
+
+**RSS feed:** https://security.libredevops.org/data/feed.xml
+
+---
 
 ## Features
 
-- 📰 **Security-focused aggregation** — Microsoft security blogs, advisories, research, and product updates
-- 🔍 **Search & filter** — Find articles by keyword, category, or date range
-- ⭐ **Bookmarks** — Save articles for later (stored locally in your browser)
-- 🌙 **Dark mode by default** — Security dashboards should be dark 😄
-- 📱 **Responsive design** — Works on desktop, tablet, and mobile
-- 🤖 **Auto-updated** — GitHub Actions fetches fresh content daily
-- 📅 **Recent content only** — Keeps the feed lean, fast, and relevant
-- 🔐 **Custom domain + HTTPS** — Hosted securely on GitHub Pages
+- 📰 **Aggregated Microsoft security intelligence**
+  Collects Microsoft security content from official public feeds including:
 
-## News Sources
+  - Microsoft Security Blog
+  - Microsoft Security Response Center
+  - Microsoft Threat Intelligence
+  - Microsoft Sentinel
+  - Microsoft Defender XDR
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Identity
+  - Microsoft Defender for Office 365
+  - Microsoft Defender for Cloud
+  - Microsoft Security Copilot
+  - Microsoft Purview
+  - Microsoft AI Blog
+  - Azure Network Security
+  - Core Infrastructure & Security
 
-| Category | Sources |
-|----------|---------|
-| **Official Security Blogs** | Microsoft Security Blog, Microsoft Defender Blog, Microsoft Sentinel Blog, Microsoft Entra Blog |
-| **Threat Intelligence** | Microsoft Threat Intelligence, MSTIC research, Digital Defense reports |
-| **Security Advisories** | Microsoft Security Response Center (MSRC), CVE advisories, release notes |
-| **Identity & Access** | Entra, Conditional Access, Identity security announcements |
-| **Cloud Security** | Defender for Cloud, Azure security updates, cloud posture guidance |
-| **Endpoint Security** | Defender for Endpoint, attack surface reduction, endpoint detection updates |
-| **Email & Collaboration Security** | Defender for Office 365, Exchange security, phishing protection updates |
-| **SIEM / XDR / SOC** | Sentinel, Defender XDR, incident response guidance |
-| **Compliance & Governance** | Purview security/compliance updates, governance announcements |
-| **Research & Community** | Security engineering blogs, Microsoft technical security articles |
+- 🔍 **Fast search**
+  Search across article titles, summaries, sources, and tagged products
 
-## Setup
+- 🏷️ **Dynamic product categorisation**
+  Automatically classifies articles into:
 
-### 1. Create the GitHub repository
+  - Microsoft Sentinel
+  - Microsoft Defender XDR
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Identity
+  - Microsoft Defender for Office 365
+  - Microsoft Defender for Cloud
+  - Microsoft Security Copilot
+  - Microsoft Purview
+  - Threat Intelligence
+  - AI Security
+  - General Security
 
-```bash
-gh repo create microsoft-security-news --public --source=. --remote=origin
-```
+- ⭐ **Bookmarks**
+  Save articles locally in browser storage
 
-### 2. Push the code
+- 🌙 **Theme support**
+  Dark mode and light mode support
 
-```bash
-git init
-git add .
-git commit -m "Initial commit - Microsoft Security News"
-git push -u origin master
-```
+- 📱 **Responsive design**
+  Desktop, tablet, and mobile support
 
-### 3. Enable GitHub Pages
+- 📡 **RSS feed support**
+  Subscribe externally:
 
-Go to:
+  ```text
+  https://security.libredevops.org/data/feed.xml
+  ```
 
-**Settings → Pages**
+- ⚡ **Progressive Web App**
+  Installable application with service worker caching
 
-Set:
+- 🤖 **Automated updates**
+  GitHub Actions refreshes content every 6 hours
 
-- **Source:** Deploy from a branch *(or GitHub Actions if using workflow deployment)*
-- **Branch:** `master`
-- **Folder:** `/ (root)`
+- 📊 **Pipeline observability**
+  Tracks:
 
-### 4. Configure custom domain
+  - feed changes
+  - newly added articles
+  - removed articles
+  - duplicate removal
+  - retention filtering
 
-Set:
+- 🔐 **Hosted securely**
+  GitHub Pages with custom domain and HTTPS
 
-```text
-security.libredevops.org
-```
+---
 
-Ensure your DNS contains:
-
-```dns
-CNAME security libre-devops.github.io
-```
-
-Wait for GitHub to provision TLS and enable HTTPS.
-
-### 5. Trigger first feed fetch
-
-Go to:
-
-**Actions → Fetch Microsoft Security Feeds → Run workflow**
-
-This will generate:
+## Architecture
 
 ```text
-data/feeds.json
-data/feed.xml
+Microsoft RSS / Atom Feeds
+          ↓
+Python Feed Aggregator
+          ↓
+Normalisation
+Classification
+Deduplication
+Retention Filtering
+Diff Analysis
+          ↓
+feeds.json + RSS XML
+          ↓
+GitHub Actions CI/CD
+          ↓
+GitHub Pages
+          ↓
+Frontend (Vanilla JS + PWA)
 ```
 
-### 6. Visit your site
+---
 
-```text
-https://security.libredevops.org
-```
+## Source Coverage
+
+### Core Microsoft Security
+- Microsoft Security Blog
+- Microsoft Security Response Center (MSRC)
+- Microsoft Threat Intelligence
+
+### Defender Ecosystem
+- Microsoft Defender XDR
+- Microsoft Defender for Endpoint
+- Microsoft Defender for Identity
+- Microsoft Defender for Office 365
+- Microsoft Defender for Cloud
+
+### Security Operations
+- Microsoft Sentinel
+- Core Infrastructure & Security
+- Azure Network Security
+
+### AI / Data Security
+- Microsoft Security Copilot
+- Microsoft Purview
+- Microsoft AI Blog
 
 ---
 
@@ -104,7 +142,7 @@ Install dependencies:
 pip install -r scripts/requirements.txt
 ```
 
-Run the feed fetcher:
+Generate feed data:
 
 ```bash
 python scripts/fetch_feeds.py
@@ -124,52 +162,133 @@ http://localhost:8000
 
 ---
 
-## How It Works
+## Deployment
 
-1. **GitHub Actions** runs daily (or manually)
-2. **Python feed fetcher** pulls RSS / Atom feeds from Microsoft security sources
-3. Articles are:
-   - normalized
-   - deduplicated
-   - categorised
-   - sorted by publish date
-4. Results are written to:
+Deployment is fully automated via GitHub Actions.
+
+Refresh cadence:
 
 ```text
-data/feeds.json
-data/feed.xml
+Every 6 hours (UTC)
 ```
 
-5. GitHub Pages publishes the updated static site
-6. The frontend loads JSON dynamically and renders the live news feed
+Cron schedule:
+
+```yaml
+0 */6 * * *
+```
+
+Pipeline workflow:
+
+1. Fetch public Microsoft security feeds
+2. Normalise feed content
+3. Apply product classification
+4. Deduplicate articles
+5. Remove content older than retention threshold
+6. Compare against previous feed state
+7. Generate:
+   - `data/feeds.json`
+   - `data/feed.xml`
+8. Publish static site to GitHub Pages
 
 ---
 
-## Tech Stack
+## Setup
 
-- **Python 3.14**
-- **feedparser**
-- **GitHub Actions**
-- **GitHub Pages**
-- **Vanilla JavaScript**
-- **Progressive Web App (PWA)**
-- **Service Worker caching**
+### Create repository
+
+```bash
+gh repo create microsoft-security-news --public --source=. --remote=origin
+```
+
+### Push code
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
+
+### Configure GitHub Pages
+
+Repository settings:
+
+```text
+Settings → Pages
+```
+
+Deployment source:
+
+```text
+GitHub Actions
+```
+
+### Configure custom domain
+
+Set:
+
+```text
+security.libredevops.org
+```
+
+DNS:
+
+```dns
+CNAME security libre-devops.github.io
+```
+
+Wait for GitHub TLS provisioning.
+
+### Initial run
+
+Run workflow manually:
+
+```text
+Actions → Update Microsoft Security News Feed → Run workflow
+```
+
+---
+
+## Technology Stack
+
+- Python 3.14
+- feedparser
+- GitHub Actions
+- GitHub Pages
+- Vanilla JavaScript
+- HTML5 / CSS3
+- Progressive Web App
+- Service Worker caching
 
 ---
 
 ## Roadmap
 
-Planned improvements:
+Potential future improvements:
 
-- [ ] More Microsoft security feed sources
-- [ ] CVE severity filtering
-- [ ] Product-based filtering (Sentinel / Defender / Entra / Purview)
-- [ ] Security alert digest mode
-- [ ] RSS subscription support
-- [ ] Email digest generation
-- [ ] Threat intelligence tagging
-- [ ] Search by product/workload
-- [ ] Optional vendor expansion (AWS / Google / CrowdStrike / Palo Alto)
+- [ ] Additional Microsoft security sources
+- [ ] Smarter advisory ingestion
+- [ ] Severity-based MSRC filtering
+- [ ] Microsoft 365 roadmap integration
+- [ ] Public Microsoft service health feeds
+- [ ] Optional vendor expansion
+  - AWS
+  - Google Cloud
+  - Palo Alto
+  - CrowdStrike
+- [ ] Threat campaign highlighting
+- [ ] Digest / summary mode
+- [ ] Email subscriptions
+- [ ] Internal tenant integrations (private mode)
+
+---
+
+## Inspiration / Attribution
+
+Project concept inspired by Ricardo Martins’ excellent Azure feed aggregator:
+
+https://azurefeed.news
 
 ---
 

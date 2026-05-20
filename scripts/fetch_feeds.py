@@ -11,7 +11,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from html import unescape
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set, Tuple
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 import feedparser
@@ -22,6 +22,7 @@ SITE_DESCRIPTION = "Aggregated Microsoft security news and advisories"
 
 MAX_ARTICLE_AGE_DAYS = 30
 MAX_RSS_ITEMS = 100
+DATA_FILE = "data/feeds.json"
 
 
 @dataclass(frozen=True)
@@ -156,6 +157,7 @@ SOURCES: List[Source] = [
     ),
 ]
 
+
 PRODUCTS: Dict[str, Dict[str, Any]] = {
     "defender-xdr": {
         "name": "Microsoft Defender XDR",
@@ -269,7 +271,6 @@ PRODUCTS: Dict[str, Dict[str, Any]] = {
     },
 }
 
-
 def clean_html(text: str) -> str:
     if not text:
         return ""
@@ -332,6 +333,72 @@ def classify_products(title: str, summary: str, source_name: str = "") -> List[d
     return matches
 
 
+def load_previous_articles() -> List[dict]:
+    if not os.path.exists(DATA_FILE):
+        return []
+
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return data.get("articles", [])
+    except Exception:
+        return []
+
+
+def article_key(article: dict) -> Tuple[str, str]:
+    return (
+        article.get("title", "").strip(),
+        article.get("link", "").strip(),
+    )
+
+
+def generate_diff(previous: List[dict], current: List[dict]) -> None:
+    previous_map = {article_key(a): a for a in previous}
+    current_map = {article_key(a): a for a in current}
+
+    previous_keys = set(previous_map.keys())
+    current_keys = set(current_map.keys())
+
+    added = current_keys - previous_keys
+    removed = previous_keys - current_keys
+    unchanged = current_keys & previous_keys
+
+    print("=" * 60)
+    print("Feed Change Summary")
+    print("=" * 60)
+    print(f"Previous total: {len(previous)}")
+    print(f"Current total : {len(current)}")
+    print(f"Added         : {len(added)}")
+    print(f"Removed       : {len(removed)}")
+    print(f"Unchanged     : {len(unchanged)}")
+
+    if added:
+        print("\nNew articles:")
+
+        added_articles = sorted(
+            [current_map[key] for key in added],
+            key=lambda x: x["published"],
+            reverse=True,
+        )
+
+        for article in added_articles[:10]:
+            print(f"  + {article['title']}")
+
+    if removed:
+        print("\nRemoved articles:")
+
+        removed_articles = sorted(
+            [previous_map[key] for key in removed],
+            key=lambda x: x["published"],
+            reverse=True,
+        )
+
+        for article in removed_articles[:10]:
+            print(f"  - {article['title']}")
+
+    print("=" * 60)
+
+
 def normalize_entry(entry: Any, source: Source) -> Optional[dict]:
     title = clean_html(entry.get("title", "Untitled"))
     summary_raw = clean_html(entry.get("summary", ""))
@@ -381,24 +448,39 @@ def fetch_feed(source: Source) -> List[dict]:
         return []
 
 
-def deduplicate_articles(articles: List[dict]) -> List[dict]:
+def deduplicate_articles(articles: List[dict]) -> Tuple[List[dict], dict]:
     cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_ARTICLE_AGE_DAYS)
 
-    seen = set()
+    seen_links = set()
     unique = []
 
+    duplicate_count = 0
+    expired_count = 0
+
     for article in articles:
-        if article["link"] in seen:
+        link = article["link"]
+
+        if link in seen_links:
+            duplicate_count += 1
             continue
 
         published = datetime.fromisoformat(article["published"])
+
         if published < cutoff:
+            expired_count += 1
             continue
 
-        seen.add(article["link"])
+        seen_links.add(link)
         unique.append(article)
 
-    return unique
+    stats = {
+        "raw_total": len(articles),
+        "unique_total": len(unique),
+        "duplicates_removed": duplicate_count,
+        "expired_removed": expired_count,
+    }
+
+    return unique, stats
 
 
 def generate_json_feed(articles: List[dict]) -> None:
@@ -411,7 +493,7 @@ def generate_json_feed(articles: List[dict]) -> None:
         "articles": articles,
     }
 
-    with open("data/feeds.json", "w", encoding="utf-8") as f:
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=False)
 
 
@@ -443,13 +525,26 @@ def main():
     print(SITE_NAME)
     print("=" * 60)
 
+    previous_articles = load_previous_articles()
     articles = []
 
     for source in SOURCES:
         articles.extend(fetch_feed(source))
 
     articles.sort(key=lambda x: x["published"], reverse=True)
-    articles = deduplicate_articles(articles)
+
+    articles, dedupe_stats = deduplicate_articles(articles)
+
+    print("=" * 60)
+    print("Deduplication Summary")
+    print("=" * 60)
+    print(f"Raw fetched         : {dedupe_stats['raw_total']}")
+    print(f"Final unique        : {dedupe_stats['unique_total']}")
+    print(f"Duplicates removed  : {dedupe_stats['duplicates_removed']}")
+    print(f"Older than 30 days    : {dedupe_stats['expired_removed']}")
+    print("=" * 60)
+
+    generate_diff(previous_articles, articles)
 
     generate_json_feed(articles)
     generate_rss_feed(articles)
