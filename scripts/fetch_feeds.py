@@ -271,6 +271,7 @@ PRODUCTS: Dict[str, Dict[str, Any]] = {
     },
 }
 
+
 def clean_html(text: str) -> str:
     if not text:
         return ""
