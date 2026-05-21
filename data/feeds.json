@@ -1,8 +1,32 @@
 {
   "site": "Microsoft Security News",
-  "lastUpdated": "2026-05-21T09:51:20.376761+00:00",
+  "lastUpdated": "2026-05-21T15:37:40.019474+00:00",
   "totalArticles": 54,
   "articles": [
+    {
+      "title": "From AI pilots to enterprise impact: Why execution is the new differentiator",
+      "link": "https://blogs.microsoft.com/blog/2026/05/21/from-ai-pilots-to-enterprise-impact-why-execution-is-the-new-differentiator/",
+      "published": "2026-05-21T11:02:33+00:00",
+      "summary": "As the pace of change accelerates, organizations are moving quickly from AI experimentation to enterprise-scale transformation. Leaders are prioritizing measurable outcomes, faster time to value and repeatability across the business. But many are encountering the same reality: the challenge is no...",
+      "author": "Deb Cupp",
+      "source": "Microsoft AI Blog",
+      "source_id": "ms_ai_blog",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "AI",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
     {
       "title": "Mini Shai Hulud: Compromised @antv npm packages enable CI/CD credential theft",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/05/20/mini-shai-hulud-compromised-antv-npm-packages-enable-ci-cd-credential-theft/",
@@ -1510,30 +1534,6 @@
       "vendor": "Microsoft",
       "source_category": "AI",
       "board_id": null,
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
-      ]
-    },
-    {
-      "title": "Strengthening Identity Resilience: A Deep Dive into Microsoft Entra Backup and Recovery",
-      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/strengthening-identity-resilience-a-deep-dive-into-microsoft/ba-p/4513401",
-      "published": "2026-04-21T14:49:07+00:00",
-      "summary": "In the modern security landscape, we often say that \"Identity is the new perimeter.\" We spend significant resources on Conditional Access, Phishing-Resistant MFA, and Identity Protection to keep the \"bad guys\" out. But what happens when the threat is already inside, or when a legitimate...",
-      "author": "Farooque",
-      "source": "Core Infrastructure & Security",
-      "source_id": "core_infra_security",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "Security Operations",
-      "board_id": "coreinfrastructureandsecurityblog",
       "products": [
         {
           "id": "general-security",
