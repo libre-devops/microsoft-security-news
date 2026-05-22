@@ -1,7 +1,7 @@
 {
-  "name": "Microsoft Security News",
-  "short_name": "MS Sec News",
-  "description": "Daily Microsoft security news, advisories, and threat intelligence",
+  "name": "Security News",
+  "short_name": "Sec News",
+  "description": "Daily security news, advisories, and threat intelligence",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#121212",
