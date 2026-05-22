@@ -1,7 +1,7 @@
 {
   "site": "Microsoft Security News",
-  "lastUpdated": "2026-05-21T19:58:55.128193+00:00",
-  "totalArticles": 52,
+  "lastUpdated": "2026-05-22T04:01:55.754093+00:00",
+  "totalArticles": 50,
   "articles": [
     {
       "title": "What’s new in Microsoft Security: May 2026",
@@ -1393,90 +1393,6 @@
       ],
       "tags": [
         "Microsoft Sentinel"
-      ]
-    },
-    {
-      "title": "From alert overload to decisive action: How Security Copilot agents are transforming security and IT",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/from-alert-overload-to-decisive-action-how-security-copilot/ba-p/4504213",
-      "published": "2026-04-21T22:55:44+00:00",
-      "summary": "Security and IT teams operate in a constant stream of alerts, incidents, and investigations. As environments expand across identities, endpoints, cloud, and data, the challenge becomes clear: identifying real risk quickly enough to act. Security Copilot agents bring AI directly into the flow of...",
-      "author": "Lizzie_Heinze",
-      "source": "Microsoft Security Copilot",
-      "source_id": "security_copilot",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "AI Security",
-      "board_id": "securitycopilot",
-      "products": [
-        {
-          "id": "purview",
-          "name": "Microsoft Purview",
-          "score": 13
-        },
-        {
-          "id": "security-copilot",
-          "name": "Microsoft Security Copilot",
-          "score": 9
-        },
-        {
-          "id": "threat-intelligence",
-          "name": "Threat Intelligence",
-          "score": 5
-        },
-        {
-          "id": "defender-endpoint",
-          "name": "Microsoft Defender for Endpoint",
-          "score": 4
-        },
-        {
-          "id": "sentinel",
-          "name": "Microsoft Sentinel",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Purview",
-        "Microsoft Security Copilot",
-        "Threat Intelligence",
-        "Microsoft Defender for Endpoint",
-        "Microsoft Sentinel"
-      ]
-    },
-    {
-      "title": "Automate cybersecurity at scale with Microsoft Security Copilot agents",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/automate-cybersecurity-at-scale-with-microsoft-security-copilot/ba-p/4394675",
-      "published": "2026-04-21T22:29:17+00:00",
-      "summary": "When we introduced Microsoft Security Copilot last year, we set out to transform the way defenders approach cybersecurity. As one of the industry's first generative AI solutions for security and IT teams, Security Copilot is empowering teams to catch what others miss, respond faster, and strengthen...",
-      "author": "Dorothy_Li",
-      "source": "Microsoft Security Copilot",
-      "source_id": "security_copilot",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "AI Security",
-      "board_id": "securitycopilot",
-      "products": [
-        {
-          "id": "purview",
-          "name": "Microsoft Purview",
-          "score": 13
-        },
-        {
-          "id": "security-copilot",
-          "name": "Microsoft Security Copilot",
-          "score": 9
-        },
-        {
-          "id": "threat-intelligence",
-          "name": "Threat Intelligence",
-          "score": 5
-        }
-      ],
-      "tags": [
-        "Microsoft Purview",
-        "Microsoft Security Copilot",
-        "Threat Intelligence"
       ]
     }
   ]
