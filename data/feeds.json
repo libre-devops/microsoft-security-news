@@ -1,8 +1,80 @@
 {
   "site": "Microsoft Security News",
-  "lastUpdated": "2026-05-22T14:47:29.100658+00:00",
-  "totalArticles": 51,
+  "lastUpdated": "2026-05-22T19:53:36.157209+00:00",
+  "totalArticles": 52,
   "articles": [
+    {
+      "title": "Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
+      "published": "2026-05-22T17:00:00+00:00",
+      "summary": "Microsoft has been recognized as a Leader in The Forrester Wave™: Workforce Identity Security Platforms, Q2 2026, receiving the highest scores in both the current offering and strategy categories. The post Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security...",
+      "author": "Nadim Abdo",
+      "source": "Microsoft Security Blog",
+      "source_id": "mssecurity",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Security Blog",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
+    {
+      "title": "From edge appliance to enterprise compromise: Multi-stage Linux intrusion via F5 and Confluence",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/from-edge-appliance-to-enterprise-compromise-multi-stage-linux-intrusion-via-f5-and-confluence/",
+      "published": "2026-05-22T16:53:39+00:00",
+      "summary": "A multi-stage attack on Linux devices began with an exposed F5 BIG-IP edge appliance and pivoted to an internal Confluence server for credential theft and identity compromise. Learn how the threat actor attempted Kerberos relay and lateral movement, and how Microsoft Defender detected, blocked, and...",
+      "author": "Microsoft Defender Security Research Team",
+      "source": "Microsoft Security Blog",
+      "source_id": "mssecurity",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Security Blog",
+      "board_id": null,
+      "products": [
+        {
+          "id": "threat-intelligence",
+          "name": "Threat Intelligence",
+          "score": 3
+        }
+      ],
+      "tags": [
+        "Threat Intelligence"
+      ]
+    },
+    {
+      "title": "Microsoft Security success stories: How St. Luke’s and ManpowerGroup are securing AI foundations",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-security-success-stories-how-st-lukes-and-manpowergroup-are-securing-ai-foundations/",
+      "published": "2026-05-22T16:00:00+00:00",
+      "summary": "How Frontier firms secure AI at scale: read how Microsoft customers embed governance, identity, and cloud security to make protection an enabler of AI growth. The post Microsoft Security success stories: How St. Luke’s and ManpowerGroup are securing AI foundations appeared first on Microsoft...",
+      "author": "Steve Dispensa",
+      "source": "Microsoft Security Blog",
+      "source_id": "mssecurity",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Security Blog",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
     {
       "title": "What Changed in RC4 with the January 2026 Windows Update and Why it is Important",
       "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/what-changed-in-rc4-with-the-january-2026-windows-update-and-why/ba-p/4504732",
@@ -358,75 +430,27 @@
       ]
     },
     {
-      "title": "Defense in depth for autonomous AI agents",
-      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/14/defense-in-depth-autonomous-ai-agents/",
-      "published": "2026-05-14T16:00:00+00:00",
-      "summary": "As AI agents gain autonomy, defense in depth must evolve, with application-layer design, identity, and human oversight at the center. The post Defense in depth for autonomous AI agents appeared first on Microsoft Security Blog.",
-      "author": "Alyssa Ofstein and Elliot H Omiya",
-      "source": "Microsoft Security Blog",
-      "source_id": "mssecurity",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Security Blog",
-      "board_id": null,
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
-      ]
-    },
-    {
       "title": "Kazuar: Anatomy of a nation-state botnet",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/05/14/kazuar-anatomy-of-a-nation-state-botnet/",
       "published": "2026-05-14T15:00:00+00:00",
       "summary": "Kazuar, a sophisticated malware family attributed to the Russian state actor Secret Blizzard, has been under constant development for years and continues to evolve in support of espionage-focused operations. Over time, Kazuar has expanded from a relatively traditional backdoor into a highly modular...",
       "author": "Microsoft Threat Intelligence",
-      "source": "Microsoft Security Blog",
-      "source_id": "mssecurity",
+      "source": "Microsoft Threat Intelligence",
+      "source_id": "threat_intel",
       "source_group": "Official Microsoft",
       "source_kind": "rss",
       "vendor": "Microsoft",
-      "source_category": "Security Blog",
+      "source_category": "Threat Intelligence",
       "board_id": null,
       "products": [
         {
           "id": "threat-intelligence",
           "name": "Threat Intelligence",
-          "score": 2
+          "score": 7
         }
       ],
       "tags": [
         "Threat Intelligence"
-      ]
-    },
-    {
-      "title": "When configuration becomes a vulnerability: Exploitable misconfigurations in AI apps",
-      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/14/configuration-becomes-vulnerability-exploitable-misconfigurations-ai-apps/",
-      "published": "2026-05-14T14:20:55+00:00",
-      "summary": "Exposed UIs, weak authentication, and risky defaults could turn cloud-native AI apps on Kubernetes into potential targets by threat actors. Learn how exploitable misconfigurations lead to RCE and data leaks. The post When configuration becomes a vulnerability: Exploitable misconfigurations in AI...",
-      "author": "Microsoft Defender Security Research Team and Yossi Weizman",
-      "source": "Microsoft Security Blog",
-      "source_id": "mssecurity",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "Security Blog",
-      "board_id": null,
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
       ]
     },
     {
