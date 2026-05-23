@@ -1,8 +1,74 @@
 {
   "site": "Security News",
-  "lastUpdated": "2026-05-23T08:25:04.899054+00:00",
-  "totalArticles": 131,
+  "lastUpdated": "2026-05-23T13:44:28.815693+00:00",
+  "totalArticles": 124,
   "articles": [
+    {
+      "title": "Redefining Security for an AI Driven World",
+      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/redefining-security-for-an-ai-driven-world/ba-p/4521961",
+      "published": "2026-05-22T21:14:55+00:00",
+      "summary": "Vendors are being challenged to help customers address these challenges not as a point-solution vendor but as an end-to-end security and AI platform partner. By integrating identity, data governance, threat protection, and AI services into a unified ecosystem, Microsoft can deliver coordinated...",
+      "author": "edgarus71",
+      "source": "Core Infrastructure & Security",
+      "source_id": "core_infra_security",
+      "source_group": "TechCommunity",
+      "source_kind": "techcommunity",
+      "vendor": "Microsoft",
+      "source_category": "Security Operations",
+      "board_id": "coreinfrastructureandsecurityblog",
+      "products": [
+        {
+          "id": "ai-security",
+          "name": "AI Security",
+          "score": 11
+        },
+        {
+          "id": "defender-xdr",
+          "name": "Microsoft Defender XDR",
+          "score": 11
+        },
+        {
+          "id": "defender-cloud",
+          "name": "Microsoft Defender for Cloud",
+          "score": 11
+        },
+        {
+          "id": "defender-endpoint",
+          "name": "Microsoft Defender for Endpoint",
+          "score": 11
+        },
+        {
+          "id": "purview",
+          "name": "Microsoft Purview",
+          "score": 11
+        },
+        {
+          "id": "security-copilot",
+          "name": "Microsoft Security Copilot",
+          "score": 11
+        },
+        {
+          "id": "threat-intelligence",
+          "name": "Threat Intelligence",
+          "score": 11
+        },
+        {
+          "id": "sentinel",
+          "name": "Microsoft Sentinel",
+          "score": 10
+        }
+      ],
+      "tags": [
+        "AI Security",
+        "Microsoft Defender XDR",
+        "Microsoft Defender for Cloud",
+        "Microsoft Defender for Endpoint",
+        "Microsoft Purview",
+        "Microsoft Security Copilot",
+        "Threat Intelligence",
+        "Microsoft Sentinel"
+      ]
+    },
     {
       "title": "Microsoft recognized as a Leader in The Forrester Wave™ for Workforce Identity Security Platforms",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/05/22/microsoft-recognized-as-a-leader-in-the-forrester-wave-for-workforce-identity-security-platforms/",
@@ -88,30 +154,6 @@
       "vendor": "Microsoft",
       "source_category": "Security Blog",
       "board_id": null,
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
-      ]
-    },
-    {
-      "title": "What Changed in RC4 with the January 2026 Windows Update and Why it is Important",
-      "link": "https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/what-changed-in-rc4-with-the-january-2026-windows-update-and-why/ba-p/4504732",
-      "published": "2026-05-22T14:40:47+00:00",
-      "summary": "In case you haven’t heard, RC4 is not secure and has been deprecated. In this article, I will discuss what changed with the January 2026 Windows Update and why it is important to start auditing and remediate RC4 usage is your environment. Starting with the January 13, 2026, Windows security...",
-      "author": "Elanor92",
-      "source": "Core Infrastructure & Security",
-      "source_id": "core_infra_security",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "Security Operations",
-      "board_id": "coreinfrastructureandsecurityblog",
       "products": [
         {
           "id": "general-security",
@@ -3282,198 +3324,6 @@
       "tags": [
         "Microsoft Purview",
         "Microsoft Security Copilot",
-        "Google Cloud Security"
-      ]
-    },
-    {
-      "title": "Supporting AI adoption for UK cyber defence",
-      "link": "https://www.ncsc.gov.uk/blogs/supporting-ai-adoption-for-uk-cyber-defence",
-      "published": "2026-04-23T12:00:00+00:00",
-      "summary": "Adopting AI will require time, the development of new capabilities and careful oversight.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
-      ]
-    },
-    {
-      "title": "Executive Summary: Defending against China-nexus covert networks of compromised devices",
-      "link": "https://www.ncsc.gov.uk/news/executive-summary-defending-against-china-nexus-covert-networks-of-compromised-devices",
-      "published": "2026-04-23T12:00:00+00:00",
-      "summary": "Organisations should map and baseline their edge device traffic, especially VPN and remote access connections, and adopt dynamic threat feed filtering that includes known covert network indicators.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
-      ]
-    },
-    {
-      "title": "Defending against China-nexus covert networks of compromised devices",
-      "link": "https://www.ncsc.gov.uk/news/defending-against-china-nexus-covert-networks-of-compromised-devices",
-      "published": "2026-04-23T12:00:00+00:00",
-      "summary": "Explaining the widespread shift in tactics, techniques and procedures (TTPs) towards networks of compromised infrastructure, and how to defend against it",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
-      ]
-    },
-    {
-      "title": "Passkeys are more secure than traditional ways to log in",
-      "link": "https://www.ncsc.gov.uk/blogs/passkeys-are-more-secure-than-traditional-ways-to-log-in",
-      "published": "2026-04-23T12:00:00+00:00",
-      "summary": "Passkeys offer a more usable, secure replacement for passwords and are already supported by most modern devices.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
-      ]
-    },
-    {
-      "title": "NCSC: Leave passwords in the past - passkeys are the future",
-      "link": "https://www.ncsc.gov.uk/news/ncsc-leave-passwords-in-the-past-passkeys-are-the-future",
-      "published": "2026-04-23T12:00:00+00:00",
-      "summary": "Passkeys are the more secure and user-friendly login method and should be the default authentication option for consumers.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
-      ]
-    },
-    {
-      "title": "International cyber agencies share fresh advice to defend against China-linked covert networks",
-      "link": "https://www.ncsc.gov.uk/news/international-cyber-agencies-fresh-advice-defend-against-china-linked-covert-networks",
-      "published": "2026-04-23T12:00:00+00:00",
-      "summary": "New advisory highlights how to defend against attacker tactics believed to be used by China-linked actors to hide malicious cyber activity.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
-      ]
-    },
-    {
-      "title": "Introducing the Microsoft Sentinel Training Lab. Hands-On Security Operations in Minutes",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274",
-      "published": "2026-04-23T08:50:24+00:00",
-      "summary": "A huge thanks to Paul Kew - this lab wouldn't have been possible without his contributions. Security operations is one of those things that’s hard to learn from slides alone. You need to feel what it’s like to triage a multi-stage incident, tune a noisy detection rule, or trace an attacker pivoting...",
-      "author": "AndreasKapetaniou",
-      "source": "Microsoft Sentinel",
-      "source_id": "sentinel",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "SIEM / SOAR",
-      "board_id": "microsoftsentinelblog",
-      "products": [
-        {
-          "id": "defender-xdr",
-          "name": "Microsoft Defender XDR",
-          "score": 11
-        },
-        {
-          "id": "sentinel",
-          "name": "Microsoft Sentinel",
-          "score": 10
-        },
-        {
-          "id": "threat-intelligence",
-          "name": "Threat Intelligence",
-          "score": 8
-        },
-        {
-          "id": "aws-security",
-          "name": "AWS Security",
-          "score": 4
-        },
-        {
-          "id": "gcp-security",
-          "name": "Google Cloud Security",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Defender XDR",
-        "Microsoft Sentinel",
-        "Threat Intelligence",
-        "AWS Security",
         "Google Cloud Security"
       ]
     }
