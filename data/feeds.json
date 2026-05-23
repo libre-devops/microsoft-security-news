@@ -1,7 +1,7 @@
 {
   "site": "Security News",
-  "lastUpdated": "2026-05-23T13:44:28.815693+00:00",
-  "totalArticles": 124,
+  "lastUpdated": "2026-05-23T19:17:03.177901+00:00",
+  "totalArticles": 123,
   "articles": [
     {
       "title": "Redefining Security for an AI Driven World",
@@ -3289,42 +3289,6 @@
       "tags": [
         "Threat Intelligence",
         "Microsoft Sentinel"
-      ]
-    },
-    {
-      "title": "From Oversharing to Enforcement: A Practical Guide to AI Data Security with Microsoft Purview",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-purview-blog/from-oversharing-to-enforcement-a-practical-guide-to-ai-data/ba-p/4513727",
-      "published": "2026-04-23T14:58:26+00:00",
-      "summary": "Why AI Changed the Data Security Problem AI does not create entirely new categories of risk—it supercharges existing ones. Traditional data leakage stems from ordinary behavior: sharing a document too broadly, sending an email to the wrong person, copying regulated data to an uncontrolled device....",
-      "author": "George Smyrlis",
-      "source": "Microsoft Purview",
-      "source_id": "purview",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "Data Security",
-      "board_id": "microsoftpurviewblog",
-      "products": [
-        {
-          "id": "purview",
-          "name": "Microsoft Purview",
-          "score": 11
-        },
-        {
-          "id": "security-copilot",
-          "name": "Microsoft Security Copilot",
-          "score": 11
-        },
-        {
-          "id": "gcp-security",
-          "name": "Google Cloud Security",
-          "score": 5
-        }
-      ],
-      "tags": [
-        "Microsoft Purview",
-        "Microsoft Security Copilot",
-        "Google Cloud Security"
       ]
     }
   ]
