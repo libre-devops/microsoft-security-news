@@ -1,7 +1,7 @@
 {
   "site": "Security News",
-  "lastUpdated": "2026-05-27T10:01:33.776712+00:00",
-  "totalArticles": 123,
+  "lastUpdated": "2026-05-27T15:55:35.974514+00:00",
+  "totalArticles": 121,
   "articles": [
     {
       "title": "Designing secure access with ZTNA",
@@ -3223,54 +3223,6 @@
       ],
       "tags": [
         "General Security"
-      ]
-    },
-    {
-      "title": "The next phase of the Microsoft-OpenAI partnership",
-      "link": "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/",
-      "published": "2026-04-27T13:00:02+00:00",
-      "summary": "Amended Agreement Provides Long-Term Clarity The rapid pace of innovation requires us to continue to evolve our partnership to benefit our customers and both companies. Today, we are announcing an amended agreement to simplify our partnership and the way we work together, grounded in flexibility,...",
-      "author": "Microsoft Corporate Blogs",
-      "source": "Microsoft AI Blog",
-      "source_id": "ms_ai_blog",
-      "source_group": "Official Microsoft",
-      "source_kind": "rss",
-      "vendor": "Microsoft",
-      "source_category": "AI",
-      "board_id": null,
-      "products": [
-        {
-          "id": "general-security",
-          "name": "General Security",
-          "score": 1
-        }
-      ],
-      "tags": [
-        "General Security"
-      ]
-    },
-    {
-      "title": "Could your choice of metrics be harming your SOC?",
-      "link": "https://www.ncsc.gov.uk/blogs/could-your-choice-of-metrics-be-harming-your-soc",
-      "published": "2026-04-27T12:00:00+00:00",
-      "summary": "Poor metrics can render a well-intentioned security operation centre entirely ineffective.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
       ]
     }
   ]
