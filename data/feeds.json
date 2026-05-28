@@ -1,7 +1,7 @@
 {
   "site": "Security News",
-  "lastUpdated": "2026-05-27T20:24:08.516112+00:00",
-  "totalArticles": 118,
+  "lastUpdated": "2026-05-28T03:59:28.167924+00:00",
+  "totalArticles": 119,
   "articles": [
     {
       "title": "GCP-2026-028",
@@ -25,6 +25,30 @@
       ],
       "tags": [
         "Google Cloud Security"
+      ]
+    },
+    {
+      "title": "Organize your multitenant view with Tenant Groups in Microsoft Defender",
+      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/organize-your-multitenant-view-with-tenant-groups-in-microsoft/ba-p/4522992",
+      "published": "2026-05-27T16:00:00+00:00",
+      "summary": "Managing security across many tenants shouldn’t mean drowning in a single, flat list. We’re excited to share a new capability, now in public preview in the Microsoft Defender multitenant (MTO) portal: Tenant Groups—a flexible way to organize the tenants you manage and switch your view between them...",
+      "author": "Simaya_Ouli",
+      "source": "Microsoft Defender XDR",
+      "source_id": "defender_xdr",
+      "source_group": "TechCommunity",
+      "source_kind": "techcommunity",
+      "vendor": "Microsoft",
+      "source_category": "XDR",
+      "board_id": "microsoftthreatprotectionblog",
+      "products": [
+        {
+          "id": "defender-xdr",
+          "name": "Microsoft Defender XDR",
+          "score": 11
+        }
+      ],
+      "tags": [
+        "Microsoft Defender XDR"
       ]
     },
     {
