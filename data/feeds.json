@@ -1,7 +1,7 @@
 {
   "site": "Security News",
-  "lastUpdated": "2026-05-28T20:29:40.746490+00:00",
-  "totalArticles": 116,
+  "lastUpdated": "2026-05-29T04:01:33.316846+00:00",
+  "totalArticles": 113,
   "articles": [
     {
       "title": "The Gentlemen ransomware: Dissecting a self-propagating Go encryptor",
@@ -2983,138 +2983,6 @@
       ],
       "tags": [
         "Threat Intelligence"
-      ]
-    },
-    {
-      "title": "Automating Phishing Email Triage with Microsoft Security Copilot",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-security-copilot-blog/automating-phishing-email-triage-with-microsoft-security-copilot/ba-p/4416559",
-      "published": "2026-04-29T03:50:49+00:00",
-      "summary": "This blog details automating phishing email triage using Azure Logic Apps, Azure Function Apps, and Microsoft Security Copilot. Deployable in under 10 minutes, this solution primarily analyzes email intent without relying on traditional indicators of compromise, accurately classifying benign/junk,...",
-      "author": "craigfreyman-msft",
-      "source": "Microsoft Security Copilot",
-      "source_id": "security_copilot",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "AI Security",
-      "board_id": "securitycopilot",
-      "products": [
-        {
-          "id": "defender-office",
-          "name": "Microsoft Defender for Office 365",
-          "score": 11
-        },
-        {
-          "id": "security-copilot",
-          "name": "Microsoft Security Copilot",
-          "score": 11
-        },
-        {
-          "id": "sentinel",
-          "name": "Microsoft Sentinel",
-          "score": 10
-        }
-      ],
-      "tags": [
-        "Microsoft Defender for Office 365",
-        "Microsoft Security Copilot",
-        "Microsoft Sentinel"
-      ]
-    },
-    {
-      "title": "Monthly news - January 2026",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/monthly-news-january-2026/ba-p/4484885",
-      "published": "2026-04-28T23:33:54+00:00",
-      "summary": "Microsoft DefenderMonthly news - January 2026 Edition This is our monthly \"What's new\" blog post, summarizing product updates and various new assets we released over the past month across our Defender products. In this edition, we are looking at all the goodness from December 2025. Defender for...",
-      "author": "HeikeRitter",
-      "source": "Microsoft Defender XDR",
-      "source_id": "defender_xdr",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "XDR",
-      "board_id": "microsoftthreatprotectionblog",
-      "products": [
-        {
-          "id": "defender-xdr",
-          "name": "Microsoft Defender XDR",
-          "score": 11
-        },
-        {
-          "id": "defender-cloud",
-          "name": "Microsoft Defender for Cloud",
-          "score": 11
-        },
-        {
-          "id": "defender-cloud-apps",
-          "name": "Microsoft Defender for Cloud Apps",
-          "score": 11
-        },
-        {
-          "id": "defender-endpoint",
-          "name": "Microsoft Defender for Endpoint",
-          "score": 11
-        },
-        {
-          "id": "defender-identity",
-          "name": "Microsoft Defender for Identity",
-          "score": 11
-        },
-        {
-          "id": "defender-office",
-          "name": "Microsoft Defender for Office 365",
-          "score": 11
-        },
-        {
-          "id": "threat-intelligence",
-          "name": "Threat Intelligence",
-          "score": 5
-        },
-        {
-          "id": "sentinel",
-          "name": "Microsoft Sentinel",
-          "score": 4
-        }
-      ],
-      "tags": [
-        "Microsoft Defender XDR",
-        "Microsoft Defender for Cloud",
-        "Microsoft Defender for Cloud Apps",
-        "Microsoft Defender for Endpoint",
-        "Microsoft Defender for Identity",
-        "Microsoft Defender for Office 365",
-        "Threat Intelligence",
-        "Microsoft Sentinel"
-      ]
-    },
-    {
-      "title": "Microsoft Ignite 2025: Transforming Phishing Response with Agentic Innovation",
-      "link": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/microsoft-ignite-2025-transforming-phishing-response-with/ba-p/4470791",
-      "published": "2026-04-28T23:31:24+00:00",
-      "summary": "Phishing attacks remain one of the most persistent and damaging threats to organizations worldwide. Security teams are under constant pressure to investigate a growing number of user reported phishing emails daily, ensuring accurate verdicts and timely responses. As threats grow in volume and...",
-      "author": "JeffreyPinkston",
-      "source": "Microsoft Defender for Office 365",
-      "source_id": "defender_office",
-      "source_group": "TechCommunity",
-      "source_kind": "techcommunity",
-      "vendor": "Microsoft",
-      "source_category": "Email Security",
-      "board_id": "microsoftdefenderforoffice365blog",
-      "products": [
-        {
-          "id": "defender-office",
-          "name": "Microsoft Defender for Office 365",
-          "score": 11
-        },
-        {
-          "id": "security-copilot",
-          "name": "Microsoft Security Copilot",
-          "score": 5
-        }
-      ],
-      "tags": [
-        "Microsoft Defender for Office 365",
-        "Microsoft Security Copilot"
       ]
     }
   ]
