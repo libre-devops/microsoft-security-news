@@ -1,8 +1,80 @@
 {
   "site": "Security News",
-  "lastUpdated": "2026-05-31T08:51:52.075251+00:00",
-  "totalArticles": 108,
+  "lastUpdated": "2026-05-31T13:53:22.037719+00:00",
+  "totalArticles": 110,
   "articles": [
+    {
+      "title": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13230",
+      "published": "2026-05-31T08:41:09+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
+    {
+      "title": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13226",
+      "published": "2026-05-31T08:41:02+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
+    {
+      "title": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.59 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "link": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-13227",
+      "published": "2026-05-31T08:40:55+00:00",
+      "summary": "Information published.",
+      "author": "Microsoft",
+      "source": "Microsoft Security Response Center",
+      "source_id": "msrc",
+      "source_group": "Official Microsoft",
+      "source_kind": "rss",
+      "vendor": "Microsoft",
+      "source_category": "Advisories",
+      "board_id": null,
+      "products": [
+        {
+          "id": "general-security",
+          "name": "General Security",
+          "score": 1
+        }
+      ],
+      "tags": [
+        "General Security"
+      ]
+    },
     {
       "title": "Malicious npm packages abuse dependency confusion to profile developer environments",
       "link": "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/",
@@ -2851,30 +2923,6 @@
       ],
       "tags": [
         "Threat Intelligence"
-      ]
-    },
-    {
-      "title": "Preparing for a ‘vulnerability patch wave’",
-      "link": "https://www.ncsc.gov.uk/blogs/prepare-for-vulnerability-patch-wave",
-      "published": "2026-05-01T12:00:00+00:00",
-      "summary": "Organisations must act now to prepare for a wave of patches that will address decades of technical debt.",
-      "author": "",
-      "source": "NCSC Security Feed",
-      "source_id": "ncsc_security",
-      "source_group": "Official NCSC",
-      "source_kind": "rss",
-      "vendor": "NCSC",
-      "source_category": "Security Advisories",
-      "board_id": null,
-      "products": [
-        {
-          "id": "ncsc-guidance",
-          "name": "NCSC Guidance",
-          "score": 6
-        }
-      ],
-      "tags": [
-        "NCSC Guidance"
       ]
     }
   ]
